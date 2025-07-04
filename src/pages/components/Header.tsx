@@ -54,8 +54,8 @@ export default function Header() {
 
             {/* Mobile Nav Panel */}
             {isOpen && (
-                <div className="md:hidden px-4 pb-4">
-                    <nav className="flex flex-col gap-3">
+                <div className="md:hidden animate-slideDown bg-[#EAF4FB]/90 backdrop-blur-md border-t border-blue-100 px-6 py-6 shadow-inner">
+                    <nav className="flex flex-col gap-4 transition-opacity duration-300 ease-in-out">
                         <Link href="/" className="text-[#0F2C52] hover:text-blue-600" onClick={() => setIsOpen(false)}>Home</Link>
                         <Link href="/services" className="text-[#0F2C52] hover:text-blue-600" onClick={() => setIsOpen(false)}>Services</Link>
                         <Link href="/blog" className="text-[#0F2C52] hover:text-blue-600" onClick={() => setIsOpen(false)}>Blog</Link>
@@ -70,6 +70,7 @@ export default function Header() {
                     </nav>
                 </div>
             )}
+
         </header>
     );
 }
