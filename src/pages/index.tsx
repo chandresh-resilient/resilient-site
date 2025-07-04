@@ -1,9 +1,9 @@
-import Header from "./components/Header";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
     <>
-      <Header />
+      <Navbar />
       <main className="min-h-screen bg-[#EAF4FB] text-[#0F2C52] font-sans">
         <div className="max-w-5xl mx-auto py-20 px-6">
           <h1 className="text-5xl font-bold mb-4">Resilient IT Services</h1>
