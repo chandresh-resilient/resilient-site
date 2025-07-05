@@ -8,7 +8,7 @@ import Image from 'next/image'
 const counters = [
   { value: 500, suffix: '+', label: 'Projects Delivered' },
   { value: 98, suffix: '%', label: 'Client Satisfaction' },
-  { value: 247, suffix: '', label: 'Support Available' },
+  { value: 24, suffix: '*7', label: 'Support Available' },
   { value: 5, suffix: '+', label: 'Years Experience' },
 ]
 
@@ -34,7 +34,7 @@ export default function Hero() {
       {/* Background overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/back.jpg" // Replace with your image in /public
+          src="/back.jpg" 
           alt="Background"
           fill
           className="object-cover opacity-40"

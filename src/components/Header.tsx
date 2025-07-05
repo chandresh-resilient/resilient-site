@@ -17,11 +17,10 @@ export default function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-md font-medium">
           <Link href="/" className=" hover:text-blue-600 ">Home</Link>
-            <a href="#about" className="hover:text-purple-400 transition">About</a>
-            <a href="#services" className="hover:text-purple-400 transition">Services</a>
-            <a href="#technologies" className="hover:text-purple-400 transition">Technologies</a>
-            <a href="#clients" className="hover:text-purple-400 transition">Clients</a>
-            <a href="#contact" className="hover:text-purple-400 transition">Contact</a>
+            <a href="#about" className="hover:text-blue-600 transition">About</a>
+            <a href="#services" className="hover:text-blue-600 transition">Services</a>
+            <a href="#technologies" className="hover:text-blue-600 transition">Technologies</a>
+            <a href="#contact" className="hover:text-blue-600 transition">Contact</a>
         </nav>
 
         {/* Mobile Hamburger */}
@@ -32,12 +31,12 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2 text-purple-700 bg-white">
-          <Link href="/" className="block hover:text-purple-500">Home</Link>
-          <Link href="/about" className="block hover:text-purple-500">About</Link>
-          <Link href="/services" className="block hover:text-purple-500">Services</Link>
-          <Link href="/technologies" className="block hover:text-purple-500">Technologies</Link>
-          <Link href="/contact" className="block hover:text-purple-500">Contact</Link>
+        <div className="md:hidden px-4 pb-4 space-y-2 text-gray-800 bg-white">
+           <Link href="/" className=" hover:text-blue-600 ">Home</Link>
+            <a href="#about" className="hover:text-blue-600 transition">About</a>
+            <a href="#services" className="hover:text-blue-600 transition">Services</a>
+            <a href="#technologies" className="hover:text-blue-600 transition">Technologies</a>
+            <a href="#contact" className="hover:text-blue-600 transition">Contact</a>
         </div>
       )}
     </header>

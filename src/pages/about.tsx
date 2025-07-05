@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import { Link } from 'lucide-react'
 
 export default function AboutUs() {
   return (
@@ -17,10 +18,10 @@ export default function AboutUs() {
           <p className="text-lg text-purple-700 mb-4 leading-relaxed">
             Resilient IT Services is a forward-thinking technology company focused on delivering agile and scalable digital solutions using cutting-edge low-code platforms like Mendix, OutSystems, Caspio, and modern stacks like React and Vite.
           </p>
-          <p className="text-md text-purple-700">
+          <p className="text-md text-purple-700 mb-4">
             We empower businesses to streamline operations and accelerate innovation by reducing development time while maintaining high quality and flexibility. Our goal is to help clients digitally transform with confidence and speed.
           </p>
-          <button className="mt-2 text-blue-600 font-semibold hover:text-blue-800 transition-colors">Learn More →</button>
+          <a className="text-blue-600 font-semibold hover:text-blue-800 transition-colors"  href='/aboutus'>Learn More →</a>
         </motion.div>
 
         {/* Image / Illustration */}
