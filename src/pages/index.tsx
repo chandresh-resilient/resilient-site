@@ -1,3 +1,4 @@
+export const dynamic = 'error';
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import AboutUs from "./about";

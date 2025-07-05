@@ -1,3 +1,4 @@
+export const dynamic = 'error';
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import AOS from 'aos'
