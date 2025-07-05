@@ -19,7 +19,7 @@ export default function Clients() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-purple-900 mb-10"
+          className="text-3xl md:text-4xl font-bold text-black mb-10"
         >
           Trusted by Global Clients
         </motion.h2>

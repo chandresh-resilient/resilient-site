@@ -65,9 +65,9 @@ const About = () => {
             <AnimatePresence mode="wait">
               <motion.span
                 key={index}
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 0 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
+                exit={{ opacity: 0, x: 0 }}
                 transition={{ duration: 2 }}
                 className="inline-block text-primary"
               >
@@ -128,18 +128,17 @@ const About = () => {
 
         {/* Right Visual (you can update this) */}
         <div className="mt-10 md:mt-0 md:w-1/2 relative h-full">
-          <div className="bg-gray-200 flex items-center justify-center">
+          <div className=" flex items-center justify-center">
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="md:w-1/2"
             >
               <img
                 src="/about.png"
                 alt="About us illustration"
-                className="w-full h-auto rounded-xl shadow-md"
+                className="w-full h-auto rounded-xl shadow-md  hover:scale-105 transition-transform duration-300"
               />
             </motion.div>
           </div>

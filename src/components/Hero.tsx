@@ -5,6 +5,7 @@ import { ChevronDown } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import TypewriterEffect from './typewriter'
 
 const counters = [
   { value: 500, suffix: '+', label: 'Projects Delivered' },
@@ -44,9 +45,22 @@ export default function Hero() {
 
       {/* Main content */}
       <div className="relative z-10 px-4 py-24 md:py-36 text-center max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+        {/* <h1 className="text-4xl md:text-6xl font-bold leading-tight">
           Build Tomorrow's <span className="text-yellow-400">Solutions</span> Today
-        </h1>
+        </h1> */}
+         <TypewriterEffect
+        lines={[
+          "Build Tomorrow's Solutions Today",
+          'Transforming Ideas into Reality',
+          'Building Scalable Low-Code Solutions',
+          'Empowering Innovation Through Technology',
+          'Solving Today, Evolving Tomorrow',
+          'Smart Solutions for a Fast-Changing World',
+          'Innovate Fast. Scale Smart',
+          'Crafting Technology that Matters',
+          'Transforming Possibilities into Realities',
+        ]}
+      />
         <p className="mt-4 text-purple-100 text-lg md:text-xl">
           Accelerate your digital transformation with cutting-edge low-code technologies
         </p>
@@ -88,7 +102,7 @@ export default function Hero() {
         <ChevronDown size={28} />
       </div>
 
-      {/* Bottom curved SVG */}
+      {/* Bottom curved SVG
       <div className="relative z-10">
         <svg
           className="w-full -mb-1"
@@ -101,7 +115,7 @@ export default function Hero() {
             d="M0,40 C360,150 1080,0 1440,80 L1440,100 L0,100 Z"
           />
         </svg>
-      </div>
+      </div> */}
     </section>
   )
 }

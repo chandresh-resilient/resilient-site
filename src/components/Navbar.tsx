@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-sm backdrop-blur-md' : 'bg-transparent'
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-sm backdrop-blur-md text-gray-700' : 'bg-transparent'
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -58,8 +58,8 @@ const Navbar = () => {
           </Link>
 
           {/* 🔹 Desktop Menu */}
-          <nav className="hidden md:flex items-center gap-6 text-gray-700 font-medium">
-            <a href="#about" className="hover:text-[#10B981] transition">About us</a>
+          <nav className="hidden md:flex items-center gap-6 text-white-700 font-medium">
+            <a href="/aboutus" className="hover:text-[#10B981] transition">About us</a>
             <div className="group relative">
               <button className="hover:text-[#10B981] transition flex items-center">Solutions <ChevronDown className="ml-1" size={16} /></button>
               <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block">
@@ -99,9 +99,6 @@ const Navbar = () => {
             >
               Get in touch
             </a>
-            <div className="group relative">
-              <button className="ml-2 hover:text-[#10B981] transition">EN</button>
-            </div>
           </nav>
 
           {/* 🔹 Mobile Menu Button */}
