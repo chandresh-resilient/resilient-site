@@ -38,7 +38,7 @@ export default function Hero() {
           src="/back.jpg" 
           alt="Background"
           fill
-          className="object-cover opacity-40"
+          className="object-cover opacity-10"
         />
       </div>
 
