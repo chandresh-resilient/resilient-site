@@ -128,7 +128,7 @@ const About = () => {
 
         {/* Right Visual (you can update this) */}
         <div className="mt-10 md:mt-0 md:w-1/2 relative h-full">
-          <div className="w-40 h-40 bg-gray-200 flex items-center justify-center">
+          <div className="bg-gray-200 flex items-center justify-center">
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
