@@ -5,6 +5,7 @@ import Services from "./services";
 import Technologies from "./technologies";
 import Contact from "./contact";
 import Clients from "./clients";
+import IndustriesPage from "./industries";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutUs />
       <Services />
       <Technologies />
+      <IndustriesPage />
       <Clients />
       <Contact />
       </Layout>
