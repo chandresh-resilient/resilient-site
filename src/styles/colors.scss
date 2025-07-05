@@ -12,41 +12,6 @@
   --danger-color: #dc3545;
   --warning-color: #ffc107;
 
-  --primary-color-1: #5aa0ff; /* Lightest variant */
-  --primary-color-2: #3b8eff; /* Lighter variant */
-  --primary-color-3: #1E90FF; /* Base color */
-  --primary-color-4: #1a7edc; /* Darker variant */
-  --primary-color-5: #1669b8; /* Darkest variant */
-
-  --secondary-color-1: #3a4f6b; /* Lightest variant */
-  --secondary-color-2: #2e3f55; /* Lighter variant */
-  --secondary-color-3: #0F2C52; /* Base color */
-  --secondary-color-4: #0d2645; /* Darker variant */
-  --secondary-color-5: #0a1f38; /* Darkest variant */
-
-  --success-color-1: #5cd67a; /* Lightest variant */
-  --success-color-2: #3ecf5e; /* Lighter variant */
-  --success-color-3: #28a745; /* Base color */
-  --success-color-4: #218838; /* Darker variant */
-  --success-color-5: #1a6b2b; /* Darkest variant */
-
-  --danger-color-1: #f28b8c; /* Lightest variant */
-  --danger-color-2: #e35f5e; /* Lighter variant */
-  --danger-color-3: #dc3545; /* Base color */
-  --danger-color-4: #c82333; /* Darker variant */
-  --danger-color-5: #b21f2a; /* Darkest variant */
-
-  --warning-color-1: #ffe08a; /* Lightest variant */
-  --warning-color-2: #ffcd4d; /* Lighter variant */
-  --warning-color-3: #ffc107; /* Base color */
-  --warning-color-4: #e0a800; /* Darker variant */
-  --warning-color-5: #c69500; /* Darkest variant */
-
-  --card-color-1: #f5f5f5; /* Lightest variant */
-  --card-color-2: #e0e0e0; /* Lighter variant */
-  --card-color-3: #cccccc; /* Base color */
-  --card-color-4: #b3b3b3; /* Darker variant */
-  --card-color-5: #999999; /* Darkest variant */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,6 +25,9 @@
     --danger-color: #c82333;
     --warning-color: #e0a800;
 
+  }
+}
+:root {
     --primary-color-1: #{mix(var(--primary-color), var(--foreground), 0.8)};
     --primary-color-2: #{mix(var(--primary-color), var(--foreground), 0.6)};
     --primary-color-3: var(--primary-color);
@@ -90,8 +58,6 @@
     --warning-color-4: #{mix(var(--warning-color), var(--background), 0.6)};
     --warning-color-5: #{mix(var(--warning-color), var(--background), 0.8)};
   }
-}
-
 .bg-primary {
   background-color: var(--primary-color);
 }
