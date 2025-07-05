@@ -54,7 +54,7 @@ export default function IndustriesSection() {
 
   return (
     <div className="relative bg-white px-6 py-12">
-      <h2 className="text-3xl font-bold mb-6 text-center text-purple-900">Industries We Serve</h2>
+      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-purple-900">Industries We Serve</h2>
 
       <div className="relative">
         {/* Scroll buttons */}
