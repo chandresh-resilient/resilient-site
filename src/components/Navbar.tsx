@@ -37,7 +37,7 @@ const Navbar = () => {
     <>
       <div className="w-full px-4">
         {/* 🔹 Desktop Nav Bar */}
-        <div className="hidden md:flex items-center justify-between bg-white shadow">
+        <div className="hidden md:flex items-center justify-between bg-background shadow">
           <div className="flex items-center gap-0">
             <Link href="/">
               <Image
@@ -49,16 +49,16 @@ const Navbar = () => {
               />
             </Link>
           </div>
-          <nav className="flex justify-center gap-8 text-gray-700 font-medium pr-6">
-            <a href="/" className="hover:text-blue-600 px-2 pr-4 transition duration-200 ease-in-out">Home</a>
-            <a href="/services" className="hover:text-blue-600 px-2 pr-4 transition duration-200 ease-in-out">Services</a>
-            <a href="/blog" className="hover:text-blue-600 px-2 pr-4 transition duration-200 ease-in-out">Blog</a>
-            <a href="/#contact" className="hover:text-blue-600 px-2 pr-10 transition duration-200 ease-in-out">Contact</a>
+          <nav className="flex justify-center gap-8 text-text font-medium pr-6">
+            <a href="/" className="hover-text-primary px-2 pr-4 transition duration-200 ease-in-out">Home</a>
+            <a href="/services" className="hover-text-primary px-2 pr-4 transition duration-200 ease-in-out">Services</a>
+            <a href="/blog" className="hover-text-primary px-2 pr-4 transition duration-200 ease-in-out">Blog</a>
+            <a href="/#contact" className="hover-text-primary px-2 pr-10 transition duration-200 ease-in-out">Contact</a>
           </nav>
         </div>
         {/* 🔹 Mobile Nav Bar */}
-        <div className="flex items-center justify-between px-4 py-3 bg-white shadow md:hidden">
-          <button onClick={(event) => { event.stopPropagation(); setIsOpen(!isOpen); }} className="text-gray-700">
+        <div className="flex items-center justify-between px-4 py-3 bg-background shadow md:hidden">
+          <button onClick={(event) => { event.stopPropagation(); setIsOpen(!isOpen); }} className="text-text">
             <Menu size={28} />
           </button>
           <div className="flex items-center gap-0">
@@ -77,22 +77,22 @@ const Navbar = () => {
 
       {/* 🔹 Sidebar Drawer */}
       <div
-        className={`fixed top-0 left-0 z-50 w-64 h-full bg-white shadow-md transform transition-transform duration-300 md:hidden ${
+        className={`fixed top-0 left-0 z-50 w-64 h-full bg-background shadow-md transform transition-transform duration-300 md:hidden ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } sidebar`}
       >
         <div className="flex items-center justify-between px-4 py-3 border-b">
-          <div className="text-xl font-semibold text-blue-700">Menu</div>
-          <button onClick={() => setIsOpen(false)} className="text-gray-700">
+          <div className="text-xl font-semibold text-primary">Menu</div>
+          <button onClick={() => setIsOpen(false)} className="text-text">
             <X size={24} />
           </button>
         </div>
-        <nav className="flex flex-col gap-4 p-4 text-gray-700">
-          <a href="/" onClick={handleMenuItemClick} className="hover:text-blue-600">Home</a>
-          <a href="/about" onClick={handleMenuItemClick} className="hover:text-blue-600">About</a>
-          <a href="/services" onClick={handleMenuItemClick} className="hover:text-blue-600">Services</a>
-          <a href="/blog" onClick={handleMenuItemClick} className="hover:text-blue-600">Blog</a>
-          <a href="/contact" onClick={handleMenuItemClick} className="hover:text-blue-600">Contact</a>
+        <nav className="flex flex-col gap-4 p-4 text-text">
+          <a href="/" onClick={handleMenuItemClick} className="hover-text-primary">Home</a>
+          <a href="/about" onClick={handleMenuItemClick} className="hover-text-primary">About</a>
+          <a href="/services" onClick={handleMenuItemClick} className="hover-text-primary">Services</a>
+          <a href="/blog" onClick={handleMenuItemClick} className="hover-text-primary">Blog</a>
+          <a href="/contact" onClick={handleMenuItemClick} className="hover-text-primary">Contact</a>
         </nav>
       </div>
     </>

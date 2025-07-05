@@ -1,68 +1,140 @@
 'use client';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const phrases = [
+  {
+    headline: 'build faster and deliver smarter.',
+    subheading: 'Low-code platforms and AI copilots power our enterprise-grade solutions.'
+  },
+  {
+    headline: 'automate delivery and simplify development.',
+    subheading: 'From Mendix to OutSystems, our experts turn ideas into scalable, reusable apps.'
+  },
+  {
+    headline: 'speed up go-to-market and reduce cost.',
+    subheading: 'AI-assisted low-code solutions that eliminate rework and unlock innovation.'
+  },
+  {
+    headline: 'engineer outcomes and eliminate complexity.',
+    subheading: 'With reusable components and intelligent frameworks, we future-proof your tech.'
+  },
+  {
+    headline: 'modernize legacy systems and streamline new builds.',
+    subheading: 'Using low-code platforms, we digitize workflows with speed, scale, and confidence.'
+  },
+  {
+    headline: 'turn business goals into smart applications.',
+    subheading: 'Our AI-powered low-code delivery model accelerates impact across industries.'
+  },
+  {
+    headline: 'combine low-code platforms and custom engineering.',
+    subheading: 'Delivering stable, scalable apps through reusable logic and AI-driven insights.'
+  },
+  {
+    headline: 'reduce bugs and improve timelines.',
+    subheading: 'With prebuilt modules, AI copilots, and one-click updates — development gets smoother.'
+  },
+  {
+    headline: 'align design and delivery from day one.',
+    subheading: 'Using component libraries and visual modeling, we cut down time-to-value.'
+  },
+  {
+    headline: 'build reusable digital foundations and drive transformation.',
+    subheading: 'Whether it’s Mendix, OutSystems, PowerApps, or Caspio — we bring your ideas to life, faster.'
+  }
+];
 
 const Hero = () => {
-    return (
-        <>
-            <section className="bg-[#EAF4FB] py-20 px-6 md:px-12">
-                <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
-                    {/* Left Text */}
-                    <div className="md:w-1/2 text-center md:text-left">
-                        <h1 className="text-4xl md:text-5xl font-bold text-[#0F2C52] leading-tight">
-                            We Deliver Smarter Apps with Low-Code and AI
-                        </h1>
-                        <p className="mt-4 text-lg text-gray-700">
-                            From Mendix to OutSystems, Caspio to PowerApps — Resilient helps you launch faster, scale better, and cut costs without compromise.
-                        </p>
+  const [index, setIndex] = useState(0);
 
-                        <motion.a
-                            href="/contact"
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
-                            whileHover={{
-                                scale: 1.05,
-                                boxShadow: '0px 0px 12px rgba(30,144,255,0.6)',
-                            }}
-                            whileTap={{ scale: 0.95 }}
-                            className="group inline-block mt-6 px-7 py-3 bg-[#1E90FF] text-white font-semibold rounded-full relative overflow-hidden transition-all duration-300"
-                        >
-                            <span className="relative z-10 flex items-center gap-2">
-                                Let’s Build Smarter
-                                <motion.span
-                                    className="inline-block"
-                                    whileHover={{ x: 6 }}
-                                    transition={{ type: 'spring', stiffness: 300 }}
-                                >
-                                    →
-                                </motion.span>
-                            </span>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % phrases.length);
+    }, 5000); // Change phrase every 5 seconds
+    return () => clearInterval(interval);
+  }, []);
 
-                            {/* Background ripple pulse on hover */}
-                            <motion.span
-                                layoutId="cta-ripple"
-                                className="absolute inset-0 bg-blue-500 opacity-0 group-hover:opacity-10 rounded-full"
-                                animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
-                                transition={{
-                                    repeat: Infinity,
-                                    repeatDelay: 2,
-                                    duration: 2,
-                                    ease: 'easeInOut',
-                                }}
-                            />
-                        </motion.a>
-                    </div>
+  return (
+    <section className="bg-background py-20 px-6 md:px-12">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+        {/* Left Text */}
+        <div className="md:w-1/2 text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold text-secondary leading-tight">
+            We
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={{ duration: 2 }}
+                className="inline-block text-primary"
+              >
+              {phrases[index].headline}
+              </motion.span>
+            </AnimatePresence>
+          </h1>
 
-                    {/* Right Logos with Floating Animation */}
-                    <div className="mt-10 md:mt-0 md:w-1/2 relative h-full">
-                        <div className="w-40 h-40 bg-gray-200 flex items-center justify-center">
-                            <span>Placeholder</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </>
-    );
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={index + '-sub'}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 2 }}
+              className="mt-4 text-lg text-text"
+            >
+              {phrases[index].subheading}
+            </motion.p>
+          </AnimatePresence>
+
+          {/* CTA */}
+          <motion.a
+            href="/contact"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: '0px 0px 12px rgba(var(--primary-color),0.6)',
+            }}
+            whileTap={{ scale: 0.95 }}
+            className="group inline-block mt-6 px-7 py-3 bg-primary text-white font-semibold rounded-full relative overflow-hidden transition-all duration-300"
+          >
+            <span className="relative z-10 flex items-center gap-2">
+              Let’s Build Smarter
+              <motion.span
+                className="inline-block"
+                whileHover={{ x: 6 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+              >
+                →
+              </motion.span>
+            </span>
+            <motion.span
+              layoutId="cta-ripple"
+              className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 rounded-full"
+              animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
+              transition={{
+                repeat: Infinity,
+                repeatDelay: 2,
+                duration: 2,
+                ease: 'easeInOut',
+              }}
+            />
+          </motion.a>
+        </div>
+
+        {/* Right Visual (you can update this) */}
+        <div className="mt-10 md:mt-0 md:w-1/2 relative h-full">
+          <div className="w-40 h-40 bg-gray-200 flex items-center justify-center">
+            <span>Placeholder</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Hero;
