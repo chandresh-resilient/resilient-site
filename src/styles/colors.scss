@@ -1,0 +1,87 @@
+/*
+  Core essential color definitions for the project.
+*/
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary-color: #1E90FF;
+  --secondary-color: #0F2C52;
+  --text-color: #4a4a4a;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --primary-color: #1E90FF;
+    --secondary-color: #0F2C52;
+    --text-color: #ededed;
+    --success-color: #218838;
+    --danger-color: #c82333;
+    --warning-color: #e0a800;
+
+  }
+}
+:root {
+    --primary-color-1: #{mix(var(--primary-color), var(--foreground), 0.8)};
+    --primary-color-2: #{mix(var(--primary-color), var(--foreground), 0.6)};
+    --primary-color-3: var(--primary-color);
+    --primary-color-4: #{mix(var(--primary-color), var(--background), 0.6)};
+    --primary-color-5: #{mix(var(--primary-color), var(--background), 0.8)};
+
+    --secondary-color-1: #{mix(var(--secondary-color), var(--foreground), 0.8)};
+    --secondary-color-2: #{mix(var(--secondary-color), var(--foreground), 0.6)};
+    --secondary-color-3: var(--secondary-color);
+    --secondary-color-4: #{mix(var(--secondary-color), var(--background), 0.6)};
+    --secondary-color-5: #{mix(var(--secondary-color), var(--background), 0.8)};
+
+    --success-color-1: #{mix(var(--success-color), var(--foreground), 0.8)};
+    --success-color-2: #{mix(var(--success-color), var(--foreground), 0.6)};
+    --success-color-3: var(--success-color);
+    --success-color-4: #{mix(var(--success-color), var(--background), 0.6)};
+    --success-color-5: #{mix(var(--success-color), var(--background), 0.8)};
+
+    --danger-color-1: #{mix(var(--danger-color), var(--foreground), 0.8)};
+    --danger-color-2: #{mix(var(--danger-color), var(--foreground), 0.6)};
+    --danger-color-3: var(--danger-color);
+    --danger-color-4: #{mix(var(--danger-color), var(--background), 0.6)};
+    --danger-color-5: #{mix(var(--danger-color), var(--background), 0.8)};
+
+    --warning-color-1: #{mix(var(--warning-color), var(--foreground), 0.8)};
+    --warning-color-2: #{mix(var(--warning-color), var(--foreground), 0.6)};
+    --warning-color-3: var(--warning-color);
+    --warning-color-4: #{mix(var(--warning-color), var(--background), 0.6)};
+    --warning-color-5: #{mix(var(--warning-color), var(--background), 0.8)};
+  }
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.bg-background {
+  background-color: var(--background);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-foreground {
+  color: var(--foreground);
+}
+
+.text-text {
+  color: var(--text-color);
+} 
