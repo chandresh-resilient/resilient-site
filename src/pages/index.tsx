@@ -6,6 +6,7 @@ import Technologies from "./technologies";
 import Contact from "./contact";
 import Clients from "./clients";
 import IndustriesPage from "./industries";
+import HeroWithVideoBackground from "@/components/herovideo";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Services />
       <AboutUs />
       <IndustriesPage />
+      <HeroWithVideoBackground />
       <Technologies />
       <Clients />
       <Contact />
