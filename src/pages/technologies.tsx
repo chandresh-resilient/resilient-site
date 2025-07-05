@@ -3,11 +3,16 @@ import { motion } from 'framer-motion'
 
 const technologies = [
   { name: 'Mendix', logo: '/logos/mendix.png' },
-  { name: 'Caspio', logo: '/logos/caspio.png' },
   { name: 'OutSystems', logo: '/logos/outsystem.png' },
   { name: 'React', logo: '/logos/react.png' },
-  { name: 'Vite', logo: '/logos/vite.jpg' },
+  { name: 'Documentum', logo: '/logos/documentum.png' },
   { name: 'Java', logo: '/logos/java.png' },
+  { name: 'Node.js', logo: '/logos/nodejs.png' },
+  { name: 'Angular', logo: '/logos/angular.png' },
+  { name: 'Vue.js', logo: '/logos/vuejs.png' },
+  { name: 'Kotlin', logo: '/logos/kotlin.jpg' },
+  { name: 'Caspio', logo: '/logos/caspio.png' },
+
 ]
 
 export default function Technologies() {
