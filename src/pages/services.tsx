@@ -51,7 +51,7 @@ export default function Services() {
             >
               <service.icon className="w-8 h-8 text-purple-700 mb-4" />
               <h3 className="text-xl font-semibold text-purple-800 mb-2">{service.title}</h3>
-              <p className="text-purple-600 text-sm">{service.description}</p>
+              <p className="text-purple-900 text-sm">{service.description}</p>
             </motion.div>
           ))}
         </div>
