@@ -3,8 +3,8 @@
 */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white: #ffffff;
+  --black: #171717;
   --primary-color: #1E90FF;
   --secondary-color: #0F2C52;
   --text-color: #4a4a4a;
@@ -16,8 +16,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --white: #0a0a0a;
+    --black: #ededed;
     --primary-color: #1E90FF;
     --secondary-color: #0F2C52;
     --text-color: #ededed;
@@ -28,46 +28,42 @@
   }
 }
 :root {
-    --primary-color-1: #{mix(var(--primary-color), var(--foreground), 0.8)};
-    --primary-color-2: #{mix(var(--primary-color), var(--foreground), 0.6)};
+    --primary-color-1: #{mix(var(--primary-color), var(--black), 0.8)};
+    --primary-color-2: #{mix(var(--primary-color), var(--black), 0.6)};
     --primary-color-3: var(--primary-color);
-    --primary-color-4: #{mix(var(--primary-color), var(--background), 0.6)};
-    --primary-color-5: #{mix(var(--primary-color), var(--background), 0.8)};
+    --primary-color-4: #{mix(var(--primary-color), var(--white), 0.6)};
+    --primary-color-5: #{mix(var(--primary-color), var(--white), 0.8)};
 
-    --secondary-color-1: #{mix(var(--secondary-color), var(--foreground), 0.8)};
-    --secondary-color-2: #{mix(var(--secondary-color), var(--foreground), 0.6)};
+    --secondary-color-1: #{mix(var(--secondary-color), var(--black), 0.8)};
+    --secondary-color-2: #{mix(var(--secondary-color), var(--black), 0.6)};
     --secondary-color-3: var(--secondary-color);
-    --secondary-color-4: #{mix(var(--secondary-color), var(--background), 0.6)};
-    --secondary-color-5: #{mix(var(--secondary-color), var(--background), 0.8)};
+    --secondary-color-4: #{mix(var(--secondary-color), var(--white), 0.6)};
+    --secondary-color-5: #{mix(var(--secondary-color), var(--white), 0.8)};
 
-    --success-color-1: #{mix(var(--success-color), var(--foreground), 0.8)};
-    --success-color-2: #{mix(var(--success-color), var(--foreground), 0.6)};
+    --success-color-1: #{mix(var(--success-color), var(--black), 0.8)};
+    --success-color-2: #{mix(var(--success-color), var(--black), 0.6)};
     --success-color-3: var(--success-color);
-    --success-color-4: #{mix(var(--success-color), var(--background), 0.6)};
-    --success-color-5: #{mix(var(--success-color), var(--background), 0.8)};
+    --success-color-4: #{mix(var(--success-color), var(--white), 0.6)};
+    --success-color-5: #{mix(var(--success-color), var(--white), 0.8)};
 
-    --danger-color-1: #{mix(var(--danger-color), var(--foreground), 0.8)};
-    --danger-color-2: #{mix(var(--danger-color), var(--foreground), 0.6)};
+    --danger-color-1: #{mix(var(--danger-color), var(--black), 0.8)};
+    --danger-color-2: #{mix(var(--danger-color), var(--black), 0.6)};
     --danger-color-3: var(--danger-color);
-    --danger-color-4: #{mix(var(--danger-color), var(--background), 0.6)};
-    --danger-color-5: #{mix(var(--danger-color), var(--background), 0.8)};
+    --danger-color-4: #{mix(var(--danger-color), var(--white), 0.6)};
+    --danger-color-5: #{mix(var(--danger-color), var(--white), 0.8)};
 
-    --warning-color-1: #{mix(var(--warning-color), var(--foreground), 0.8)};
-    --warning-color-2: #{mix(var(--warning-color), var(--foreground), 0.6)};
+    --warning-color-1: #{mix(var(--warning-color), var(--black), 0.8)};
+    --warning-color-2: #{mix(var(--warning-color), var(--black), 0.6)};
     --warning-color-3: var(--warning-color);
-    --warning-color-4: #{mix(var(--warning-color), var(--background), 0.6)};
-    --warning-color-5: #{mix(var(--warning-color), var(--background), 0.8)};
+    --warning-color-4: #{mix(var(--warning-color), var(--white), 0.6)};
+    --warning-color-5: #{mix(var(--warning-color), var(--white), 0.8)};
   }
-.bg-primary {
-  background-color: var(--primary-color);
-}
-
-.bg-secondary {
-  background-color: var(--secondary-color);
-}
 
 .bg-background {
-  background-color: var(--background);
+  background-color: var(--white);
+}
+.bg-background-black {
+  background-color: var(--black);
 }
 
 .text-primary {
@@ -79,7 +75,7 @@
 }
 
 .text-foreground {
-  color: var(--foreground);
+  color: var(--black);
 }
 
 .text-text {

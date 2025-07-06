@@ -2,7 +2,7 @@
 
 export default function HeroWithVideoBackground() {
   return (
-    <section className="relative h-[50vh] w-full bg-[#1a103d] overflow-hidden text-white">
+    <section className="relative h-[100vh] w-full bg-[#1a103d] overflow-hidden text-white">
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover "
