@@ -56,9 +56,9 @@ export default function Services() {
               viewport={{ once: true }}
               className="bg-white p-6 rounded-xl shadow hover:shadow-lg border border-gray-100 text-left transition-colors duration-200"
             >
-              <service.icon className="w-8 h-8 text-purple-700 mb-4" />
-              <h3 className="text-xl font-semibold text-purple-800 mb-2">{service.title}</h3>
-              <p className="text-purple-600 text-sm">{service.description}</p>
+              <service.icon className="w-8 h-8 text-primary mb-4" />
+              <h3 className="text-xl font-semibold text-secondary mb-2">{service.title}</h3>
+              <p className="text-text text-sm">{service.description}</p>
             </motion.div>
           ))}
         </div>
