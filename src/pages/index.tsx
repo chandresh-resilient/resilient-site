@@ -5,7 +5,7 @@ import Services from "./services";
 import Technologies from "./technologies";
 import Contact from "./contact";
 import Clients from "./clients";
-import IndustriesPage from "./industries";
+import IndustriesPage from "./industries-collection";
 import HeroWithVideoBackground from "@/components/herovideo";
 
 export default function Home() {
