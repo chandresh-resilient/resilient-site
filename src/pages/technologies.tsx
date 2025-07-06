@@ -24,7 +24,7 @@ export default function Technologies() {
   return (
     <div className="flex items-center justify-center min-h-screen pt-20 bg-[url('/techno.png')] bg-cover bg-center  ">
     <section 
-    className=" bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 py-20 max-w-2/3 h-auto  m-auto rounded-4xl shadow-xl"
+    className=" bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 py-20 rounded-4xl "
      id="technologies">
       <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.h2

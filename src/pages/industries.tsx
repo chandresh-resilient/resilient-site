@@ -10,42 +10,42 @@ const industries = [
     title: "Healthcare",
     description:
       "The healthcare industry continually faces significant challenges, including outdated technology, complex processes, and the delivery of optimal client care with minimal staffing. Moreover, strict regulations and rapidly evolving technology intensify the pressure. Low-code technology helps healthcare organizations in digitizing and hyper-automating their processes, leading to efficient time and cost savings that benefit both employees and clients.",
-    image: "/images/industries/healthcare.png",
+    image: "/images/healthcare.jpg",
     id: "healthcare",
   },
   {
     title: "Education",
     description:
       "Education institutions are increasingly turning to low-code solutions to streamline admissions, student data management, and learning experiences. With automation and seamless integrations, these platforms provide personalized learning and improved administrative efficiency.",
-    image: "/images/industries/education.png",
+    image: "/images/education.jpg",
     id: "education",
   },
   {
     title: "Logistics",
     description:
       "Logistics companies rely on complex workflows and data-heavy operations. Low-code solutions optimize these operations through real-time tracking, automated scheduling, and predictive analytics, reducing delays and improving transparency.",
-    image: "/images/industries/logistics.png",
+    image: "/images/logistics.jpg",
     id: "logistics",
   },
   {
     title: "Retail & E-Commerce",
     description:
       "Retail and e-commerce companies require agile platforms for inventory, order management, and customer engagement. Low-code platforms enable rapid deployment of tailored customer experiences and backend optimizations.",
-    image: "/images/industries/retail.png",
+    image: "/images/retail.jpg",
     id: "retail",
   },
   {
     title: "Finance",
     description:
       "Financial services need secure, compliant, and fast solutions for operations like loan processing, KYC, and client onboarding. Low-code allows rapid iteration, compliance enforcement, and process automation with high security.",
-    image: "/images/industries/finance.png",
+    image: "/images/finance.jpg",
     id: "finance",
   },
   {
     title: "Automobiles",
     description:
       "The automobile sector is embracing low-code to streamline production monitoring, supply chain management, and vehicle tracking. These solutions ensure cost-effective operations and quick adaptations to market demands.",
-    image: "/images/industries/automobile.png",
+    image: "/images/automobiles.jpg",
     id: "automobile",
   },
 ];
@@ -67,7 +67,7 @@ export default function IndustriesPage() {
             id={item.id}
           >
             <div className="flex flex-col justify-center items-start gap-4 w-full md:w-1/2 lg:w-3/5 xl:w-2/3 2xl:w-1/2 text-left">
-              <h2 className="text-green-600 text-4xl font-bold mb-6">
+              <h2 className="text-purple-600 text-4xl font-bold mb-6">
                 {item.title}
               </h2>
               <p className="text-gray-700 leading-relaxed text-lg">
@@ -79,12 +79,14 @@ export default function IndustriesPage() {
             </div>
 
             <div className="md:w-1/2 relative w-full aspect-[3/2]">
+            
               <Image
                 src={item.image}
                 alt={item.title}
                 layout="fill"
                 objectFit="cover"
-                className="rounded-xl"
+                className="rounded-xl border-t-4 border-l-4 border-purple-500 "
+                style={{ borderRadius: '0 50% 0 50%' }}
               />
             </div>
           </section>

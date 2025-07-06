@@ -94,19 +94,19 @@ const Navbar = () => {
                   Extended prototyping
                 </a>
                 <a
-                  href="/low-code-enablement"
+                  href="/solutions#low-code-enablement"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                 >
                   Low-code enablement
                 </a>
                 <a
-                  href="/our-solution-2"
+                  href="/solutions#expert-review"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                 >
                   Mendix Expert Review
                 </a>
                 <a
-                  href="/our-solutions"
+                  href="/solutions"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                 >
                   All solutions
@@ -131,10 +131,10 @@ const Navbar = () => {
                   Logistics & Supply Chain
                 </a>
                 <a
-                  href="/industries#automobile"
+                  href="/industries#finance"
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                 >
-                  Manufacturing
+                  Finance
                 </a>
                 <a
                   href="/industries"

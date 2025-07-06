@@ -1,33 +1,34 @@
 'use client';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
+import { LinkedinIcon } from 'lucide-react';
 
 const teamMembers = [
   {
     name: 'John Doe',
     role: 'Founder & CEO',
-    image: '/images/team/siddharth.jpg',
+    image: '/images/person1.jpg',
     bio: 'Passionate about low-code technologies, Siddharth leads innovation at Resilient IT Services with a focus on scalable and fast delivery.',
     linkedin: 'https://linkedin.com/in/siddharth',
   },
   {
     name: 'Neha Sharma',
     role: 'Head of Delivery',
-    image: '/images/team/neha.jpg',
+    image: '/images/person2.jpg',
     bio: 'Expert in Mendix and client management, Neha ensures our projects are always on time and exceed expectations.',
     linkedin: 'https://linkedin.com/in/neha',
   },
   {
     name: 'Jay Cadogan',
     role: 'Senior Mendix Developer',
-    image: '/images/team/jay.jpg',
+    image: '/images/person3.jpg',
     bio: 'Jay builds robust applications using Mendix and mentors junior developers on low-code best practices.',
     linkedin: 'https://linkedin.com/in/jaycadogan',
   },
   {
     name: 'Nina Morsa',
     role: 'UX/UI Designer',
-    image: '/images/team/nina.jpg',
+    image: '/images/person4.jpg',
     bio: 'Nina creates clean and intuitive user experiences that enhance application usability across industries.',
     linkedin: 'https://linkedin.com/in/ninamorsa',
   },
@@ -44,18 +45,29 @@ const TeamPage = () => {
         </p>
       </div>
 
+      <Image
+        src="/images/fullteam.jpg"
+        alt="Our Team"
+        width={1200}
+        height={600}
+        className="rounded-2xl shadow-lg mb-12 mx-auto"
+      />
+
       <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-10 max-w-6xl mx-auto">
         {teamMembers.map((member, index) => (
           <div
             key={index}
             className="bg-[#f9fafb] rounded-xl shadow-md hover:shadow-lg p-6 text-center transition"
           >
-            <div className="w-28 h-28 mx-auto mb-4 relative">
+            <div className="w-64 h-64 mx-auto mb-4 relative">
+                {/* <div className="absolute top-2 left-2 w-full h-full bg-gray-400 rounded-br-[999px] z-0" /> */}
+                 <div className="absolute top-0 left-0 w-full h-full bg-purple-700  rounded-br-[120px]  translate-x-3 translate-y-3  z-0" />
               <Image
                 src={member.image}
                 alt={member.name}
                 layout="fill"
-                className="rounded-full object-cover"
+                //  className="relative z-10 w-full h-full object-cover rounded-br-[999px] overflow-hidden"
+                    className="relative z-10 w-full h-full object-cover bg-white rounded-br-[120px] "
               />
             </div>
             <h3 className="font-semibold text-lg">{member.name}</h3>
@@ -68,7 +80,7 @@ const TeamPage = () => {
                 rel="noopener noreferrer"
                 className="inline-block mt-3 text-sm text-[#1E90FF] hover:underline"
               >
-                LinkedIn &rarr;
+                <LinkedinIcon className="inline-block mr-1" />
               </a>
             )}
           </div>

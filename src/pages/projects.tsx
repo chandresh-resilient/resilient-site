@@ -8,32 +8,32 @@ const allProjects = [
   {
     title: 'Allianz Trade - Escalations',
     description: 'Insurance digital portal | Risk assessment | Multi-tenant | Singapore',
-    image: '/images/projects/allianz.jpg',
+    image: '/images/education.jpg',
   },
   {
     title: 'Zendeq - Trading Platform',
     description: 'Sourcing and Lead Generation platform | Agile Software Development | SME',
-    image: '/images/projects/zendeq.jpg',
+    image: '/images/healthcare.jpg',
   },
   {
     title: 'Mendix - Tencent Platform',
     description: 'Deployed on Kubernetes using git pipelines | Reverse engineered integrations to mimic Sprintr, Mendix App Store, Mx New',
-    image: '/images/projects/tencent.jpg',
+    image: '/images/retail.jpg',
   },
   {
     title: 'Fleet Management App',
     description: 'Vehicle tracking | Dashboard analytics | Enterprise mobility',
-    image: '/images/projects/fleet.jpg',
+    image: '/images/finance.jpg',
   },
   {
     title: 'EduTrack LMS',
     description: 'E-learning portal | Assessment engine | Responsive UI | India',
-    image: '/images/projects/edutrack.jpg',
+    image: '/images/automobiles.jpg',
   },
   {
     title: 'FinanceBot AI',
     description: 'Automated financial reporting tool using LLMs | Fintech sector',
-    image: '/images/projects/financebot.jpg',
+    image: '/images/logistics.jpg',
   },
 ];
 

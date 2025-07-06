@@ -7,7 +7,7 @@ const caseStudies = [
     title: 'Digital Insurance Portal for Allianz Trade',
     client: 'Allianz Trade',
     industry: 'Insurance',
-    image: '/images/casestudies/allianz.jpg',
+    image: '/images/education.jpg',
     summary:
       'We built a multi-tenant, scalable insurance portal for risk assessment and escalation tracking, reducing processing time by 45%.',
     location: 'Singapore',
@@ -16,7 +16,7 @@ const caseStudies = [
     title: 'Low-Code Trading System for Zendeq',
     client: 'Zendeq',
     industry: 'Supply Chain / Logistics',
-    image: '/images/casestudies/zendeq.jpg',
+    image: '/images/automobiles.jpg',
     summary:
       'Developed a low-code lead generation platform to manage trading operations, resulting in 2x sales conversion rate.',
     location: 'Netherlands',
@@ -25,7 +25,7 @@ const caseStudies = [
     title: 'Kubernetes-Based DevOps Platform for Tencent',
     client: 'Tencent',
     industry: 'Technology',
-    image: '/images/casestudies/tencent.jpg',
+    image: '/images/logistics.jpg',
     summary:
       'Reverse engineered Mendix tools and deployed on Kubernetes with CI/CD, accelerating release cycles by 60%.',
     location: 'China',

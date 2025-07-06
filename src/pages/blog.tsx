@@ -3,6 +3,7 @@ import Layout from '@/components/Layout';
 import Image from 'next/image';
 import Link from 'next/link';
 import HeroHeader from '@/components/Heroheader';
+import { div } from 'framer-motion/client';
 
 const blogs = [
   {
@@ -10,8 +11,8 @@ const blogs = [
     subtitle: 'Digital transformation can feel like climbing a mountain...',
     author: 'Eric Weijers',
     date: 'July 4, 2025',
-    image: '/images/blog-heel-holland-money.png',
-    avatar: '/images/eric.png',
+    image: '/images/blog.jpg',
+    avatar: '/images/person1.jpg',
     badgeText: 'HEEL HOLLAND',
     badgeHighlight: 'DIGITALISEERT',
     badgeSub: 'Follow the money',
@@ -21,8 +22,8 @@ const blogs = [
     subtitle: 'Mendix Developer Jay Cadogan joins our Blue Green team.',
     author: 'Nina Morsa',
     date: 'July 4, 2025',
-    image: '/images/blog-jay.png',
-    avatar: '/images/nina.png',
+    image: '/images/blog.jpg',
+    avatar: '/images/person2.jpg',
   },
   {
     title: 'The spot on the horizon',
@@ -30,8 +31,8 @@ const blogs = [
       'When companies go digital, they usually skip one crucial step: defining a strategy...',
     author: 'Eric Weijers',
     date: 'June 18, 2025',
-    image: '/images/blog-heel-holland-cake.png',
-    avatar: '/images/eric.png',
+    image: '/images/blog.jpg',
+    avatar: '/images/person3.jpg',
     badgeText: 'HEEL HOLLAND',
     badgeHighlight: 'DIGITALISEERT',
     badgeSub: 'The spot on the horizon',
@@ -61,13 +62,17 @@ const BlogPage = () => {
                 />
                 {/* Optional Banner Text */}
                 {blog.badgeText && (
-                  <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center px-4">
+
+                 < div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent">
+                  <div className="absolute inset-0  bg-opacity-30 flex flex-col justify-center px-4">
                     <h3 className="text-white font-bold text-lg uppercase">
                       {blog.badgeText}{' '}
                       <span className="text-green-400">{blog.badgeHighlight}</span>
                     </h3>
                     <p className="text-white text-xl font-semibold">{blog.badgeSub}</p>
                   </div>
+                </div>
+
                 )}
               </div>
 
@@ -79,8 +84,8 @@ const BlogPage = () => {
                   <Image
                     src={blog.avatar}
                     alt={blog.author}
-                    width={30}
-                    height={30}
+                    width={32}
+                    height={32}
                     className="rounded-full"
                   />
                   <span>{blog.author}</span>

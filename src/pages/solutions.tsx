@@ -31,7 +31,7 @@ const SolutionsPage = () => {
           {/* Right Image */}
           <div>
             <Image
-              src="/images/team-photo.png"
+              src="/images/team.jpg"
               width={600}
               height={400}
               alt="Our Team"
@@ -75,7 +75,7 @@ const SolutionsPage = () => {
             </p>
           </div>
           <Image
-            src="/images/workflow-automation.png"
+            src="/images/auto.jpg"
             width={600}
             height={400}
             alt="Workflow Automation"
@@ -84,9 +84,9 @@ const SolutionsPage = () => {
         </div>
 
         {/* Item 2 */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center" id='expert-review'>
           <Image
-            src="/images/mendix-expert.png"
+            src="/images/experts.jpg"
             width={600}
             height={400}
             alt="Mendix Expert Scan"
