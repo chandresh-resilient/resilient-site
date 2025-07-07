@@ -35,11 +35,11 @@ const Navbar = () => {
   
 
   const handleMenuItemClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
+    // e.preventDefault();
     setIsOpen(false);
-    setTimeout(() => {
-      window.location.href = e.currentTarget.href;
-    }, 300);
+    // setTimeout(() => {
+    //   window.location.href = e.currentTarget.href;
+    // }, 300);
   };
 
   return (
@@ -211,7 +211,7 @@ const Navbar = () => {
       {/* 🔹 Mobile Sidebar */}
       {/* 🔹 Mobile Sidebar (Updated to Match Desktop) */}
       <div
-        className={`fixed top-0 left-0 z-50 w-64 h-full bg-white shadow-md transform transition-transform duration-300 md:hidden scroll-auto ${
+        className={`fixed top-0 left-0 z-50 w-64 h-full bg-white shadow-md transform transition-transform duration-300 md:hidden overflow-y-auto max-h-screen  ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } sidebar`}
       >
