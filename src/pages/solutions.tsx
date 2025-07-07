@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ShieldCheck, RefreshCw, Target } from 'lucide-react';
 import HeroHeader from '@/components/Heroheader';
 import Layout from '@/components/Layout';
+import HeroBanner from '@/components/Herobanner';
 
 const SolutionsPage = () => {
   return (
@@ -62,9 +63,9 @@ const SolutionsPage = () => {
       </section>
 
       {/* 🔹 Use Case Section */}
-      <section className="max-w-7xl mx-auto px-6 py-20 space-y-20">
+      <section className=" mx-auto py-20 space-y-20">
         {/* Item 1 */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2  mx-auto max-w-7xl px-6 gap-12 items-center">
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Workflow automation & digitalisation</h3>
             <p className="mb-4">
@@ -83,8 +84,15 @@ const SolutionsPage = () => {
           />
         </div>
 
+        <HeroBanner 
+          backgroundImage="/images/person4.jpg"
+          title="Want to see how Mendix low-code can help your business?"
+          buttonText="Get your free consultation"
+          onButtonClick={() => window.location.href = "/#contact"}
+        />
+
         {/* Item 2 */}
-        <div className="grid md:grid-cols-2 gap-12 items-center" id='expert-review'>
+        <div className="grid md:grid-cols-2 mx-auto gap-12 max-w-7xl px-6 items-center" id='expert-review'>
           <Image
             src="/images/experts.jpg"
             width={600}

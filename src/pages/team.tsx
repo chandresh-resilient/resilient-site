@@ -2,6 +2,7 @@
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 import { LinkedinIcon } from 'lucide-react';
+import HeroBanner from '@/components/Herobanner';
 
 const teamMembers = [
   {
@@ -37,7 +38,7 @@ const teamMembers = [
 const TeamPage = () => {
   return (
     <Layout>
-    <main className="bg-white py-20 px-6 text-[#1a103d]">
+    <main className="bg-white py-20 text-[#1a103d]">
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h1 className="text-4xl font-bold">Meet Our Team</h1>
         <p className="mt-4 text-gray-600">
@@ -52,6 +53,13 @@ const TeamPage = () => {
         height={600}
         className="rounded-2xl shadow-lg mb-12 mx-auto"
       />
+
+           <HeroBanner 
+          backgroundImage="/images/team.jpg"
+          title="Want to be part of our team?"
+          buttonText="Explore Careers"
+          onButtonClick={() => window.location.href = "/career"}
+        />
 
       <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-10 max-w-6xl mx-auto">
         {teamMembers.map((member, index) => (

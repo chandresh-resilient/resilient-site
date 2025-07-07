@@ -79,7 +79,7 @@ const ProjectsPage = () => {
       </div>
 
       {/* Pagination Controls */}
-      <div className="flex justify-center mt-12 gap-4">
+      <div className="flex justify-center items-center mt-12 gap-4">
         <button
           onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}

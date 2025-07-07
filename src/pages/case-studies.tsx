@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Layout from '@/components/Layout';
+import HeroBanner from '@/components/Herobanner';
 
 const caseStudies = [
   {
@@ -35,6 +36,7 @@ const caseStudies = [
 const CaseStudiesPage = () => {
   return (
     <Layout>
+    
     <main className="bg-white py-20 px-6">
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h1 className="text-4xl font-bold text-[#1a103d]">Case Studies</h1>
@@ -72,6 +74,7 @@ const CaseStudiesPage = () => {
         ))}
       </div>
     </main>
+   
     </Layout>
   );
 };

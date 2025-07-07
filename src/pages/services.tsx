@@ -54,7 +54,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 p-6 rounded-xl shadow hover:shadow-lg border border-gray-100 text-left transition-colors duration-200"
+              className=" bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg border border-gray-100 text-left transition-colors duration-200"
             >
               <service.icon className="w-8 h-8 text-primary mb-4" />
               <h3 className="text-xl font-semibold  text-white mb-2">{service.title}</h3>

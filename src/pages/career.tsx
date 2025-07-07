@@ -7,26 +7,26 @@ const jobs = [
   {
     title: 'Mendix Developer',
     location: 'Remote / India',
+    experience: '3+ years',
     type: 'Full-time',
     description:
       'We are looking for a skilled Mendix Developer to help us build low-code solutions for clients across various industries.',
-    link: '/careers/mendix-developer',
   },
   {
     title: 'React Frontend Engineer',
     location: 'Remote / Hybrid',
+    experience: '2+ years',
     type: 'Contract / Freelance',
     description:
       'Join our team to develop beautiful and interactive user interfaces using React and Tailwind for enterprise-grade applications.',
-    link: '/careers/react-frontend-engineer',
   },
   {
     title: 'Low-Code Consultant',
     location: 'Bangalore, India',
+    experience: '5+ years',
     type: 'Full-time',
     description:
       'Looking for professionals with experience in platforms like OutSystems, Caspio, or Mendix to advise and deliver digital transformation solutions.',
-    link: '/careers/low-code-consultant',
   },
 ];
 
@@ -51,16 +51,16 @@ const CareerPage = () => {
               <div>
                 <h3 className="text-xl font-semibold text-[#1a103d] mb-2">{job.title}</h3>
                 <div className="text-sm text-gray-500 mb-4">
-                  {job.location} &middot; {job.type}
+                  {job.location} &middot; {job.type} &middot; {job.experience}
                 </div>
                 <p className="text-gray-600 text-sm mb-6">{job.description}</p>
               </div>
-              <Link
-                href={job.link}
+              <a
+                href="mailto:info@resilientitservices.com"
                 className="text-sm text-blue-600 font-medium hover:underline"
               >
-                View Details &rarr;
-              </Link>
+                Send Us Resume &rarr;
+              </a>
             </div>
           ))}
         </div>
