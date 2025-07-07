@@ -211,7 +211,7 @@ const Navbar = () => {
       {/* 🔹 Mobile Sidebar */}
       {/* 🔹 Mobile Sidebar (Updated to Match Desktop) */}
       <div
-        className={`fixed top-0 left-0 z-50 w-64 h-full bg-white shadow-md transform transition-transform duration-300 md:hidden ${
+        className={`fixed top-0 left-0 z-50 w-64 h-full bg-white shadow-md transform transition-transform duration-300 md:hidden scroll-auto ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } sidebar`}
       >
@@ -222,7 +222,7 @@ const Navbar = () => {
           </button>
         </div>
         <nav className="flex flex-col gap-4 p-4 text-gray-800 font-medium">
-          <a href="#about" onClick={handleMenuItemClick}>
+          <a href="/aboutus" onClick={handleMenuItemClick}>
             About us
           </a>
 
@@ -230,30 +230,30 @@ const Navbar = () => {
             Solutions
           </span>
           <a
-            href="/our-solutions#Hyper-automation"
+            href="/solutions#Hyper-automation"
             onClick={handleMenuItemClick}
           >
             Hyper automation
           </a>
           <a
-            href="/our-solutions#Application-development"
+            href="/solutions#Application-development"
             onClick={handleMenuItemClick}
           >
             Application development
           </a>
           <a
-            href="/our-solutions#Extended-prototyping"
+            href="/solutions#Extended-prototyping"
             onClick={handleMenuItemClick}
           >
             Extended prototyping
           </a>
-          <a href="/low-code-enablement" onClick={handleMenuItemClick}>
+          <a href="/solutions#low-code-enablement" onClick={handleMenuItemClick}>
             Low-code enablement
           </a>
-          <a href="/our-solution-2" onClick={handleMenuItemClick}>
+          <a href="/solutions#expert-review" onClick={handleMenuItemClick}>
             Mendix Expert Review
           </a>
-          <a href="/our-solutions" onClick={handleMenuItemClick}>
+          <a href="/solutions" onClick={handleMenuItemClick}>
             All solutions
           </a>
 
@@ -261,35 +261,35 @@ const Navbar = () => {
             Industries
           </span>
           <a
-            href="/industry-collections/healthcare"
+            href="/industries#healthcare"
             onClick={handleMenuItemClick}
           >
             Healthcare
           </a>
           <a
-            href="/industry-collections/logistics-supply-chain"
+            href="/industries#retail"
             onClick={handleMenuItemClick}
           >
             Logistics & Supply Chain
           </a>
           <a
-            href="/industry-collections/manufacturing"
+            href="/industries#finance"
             onClick={handleMenuItemClick}
           >
-            Manufacturing
+            Finance
           </a>
           <a href="/industries" onClick={handleMenuItemClick}>
             All industries
           </a>
 
-          <a href="#team" onClick={handleMenuItemClick}>
+          <a href="/team" onClick={handleMenuItemClick}>
             Our team
           </a>
-          <a href="#projects" onClick={handleMenuItemClick}>
+          <a href="/projects" onClick={handleMenuItemClick}>
             Projects
           </a>
-          <a href="#partners" onClick={handleMenuItemClick}>
-            Partners
+          <a href="/case-studies" onClick={handleMenuItemClick}>
+            Case Studies
           </a>
 
           <span className="text-sm text-gray-500 uppercase mt-2">
@@ -298,24 +298,21 @@ const Navbar = () => {
           <a href="/blog" onClick={handleMenuItemClick}>
             Blogs
           </a>
-          <a href="/low-code-cafe" onClick={handleMenuItemClick}>
+          <a href="/blog#low-code-cafe" onClick={handleMenuItemClick}>
             Low-Code Café
           </a>
-          <a href="/white-paper" onClick={handleMenuItemClick}>
+          <a href="/blog#white-paper" onClick={handleMenuItemClick}>
             Whitepapers
           </a>
-          <a href="#" onClick={handleMenuItemClick}>
+          <a href="/blog#webinars-events" onClick={handleMenuItemClick}>
             Webinars & events
           </a>
 
-          <a href="#vacancies" onClick={handleMenuItemClick}>
+          <a href="/career" onClick={handleMenuItemClick}>
             Careers
           </a>
-          <a href="#contact" onClick={handleMenuItemClick}>
+          <a href="/#contact" onClick={handleMenuItemClick}>
             Get in touch
-          </a>
-          <a href="#lang" onClick={handleMenuItemClick}>
-            EN
           </a>
         </nav>
       </div>

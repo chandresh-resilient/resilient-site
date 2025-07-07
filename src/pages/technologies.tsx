@@ -20,40 +20,45 @@ const technologies = [
   { name: "MongoDB", logo: "/logos/mongodb.png" },
 ];
 
-export default function Technologies() {
+export default function TechnologiesPage() {
   return (
-    <div className="flex items-center justify-center min-h-screen pt-20 bg-[url('/techno.png')] bg-cover bg-center  ">
-    <section 
-    className=" bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 py-20 rounded-4xl "
-     id="technologies">
-      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+    <section
+      className="max-h-screen py-20 px-4 sm:px-8 md:px-12 bg-black bg-cover bg-center bg-no-repeat"
+    
+    >
+      <div className="max-w-7xl mx-auto text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold  mb-12"
+          className="text-4xl sm:text-5xl font-bold mb-14"
         >
           Technologies We Specialize In
-        </motion.h2>
+        </motion.h1>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-10 items-center justify-center">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-6 sm:gap-8 justify-items-center">
           {technologies.map((tech, index) => (
             <motion.div
               key={tech.name}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="flex flex-col items-center space-y-2 hover:scale-105 transition"
+              className="flex flex-col items-center space-y-2 hover:scale-110 transition-transform duration-300"
             >
-              <img src={tech.logo} alt={tech.name} className="h-12 w-auto object-contain hover:grayscale transition" />
-              <span className="text-sm text-white font-medium">{tech.name}</span>
+              <img
+                src={tech.logo}
+                alt={tech.name}
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain hover:grayscale transition"
+              />
+              <span className="text-sm sm:text-base text-white font-medium text-center">
+                {tech.name}
+              </span>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-    </div>
   )
 }
