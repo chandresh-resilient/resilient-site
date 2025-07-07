@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import TypewriterEffect from './typewriter'
+import TypewriterEffect from './Typewriter'
 
 const counters = [
   { value: 500, suffix: '+', label: 'Projects Delivered' },
@@ -68,7 +68,7 @@ export default function Hero() {
         {/* Buttons */}
         <div className="mt-8 flex gap-4 flex-wrap justify-center">
           <Link
-            href="contact"
+            href="/contact-detail"
             className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold px-6 py-3 rounded-full transition"
           >
             Get Started

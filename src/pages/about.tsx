@@ -56,7 +56,7 @@ const About = () => {
 	}, []);
 
 	return (
-		<section className="bg-black py-20 px-6 md:px-12">
+		<section className="bg-black py-20 px-6 md:px-12" id='about'>
 			<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
 				{/* Left Text */}
 				<div className="md:w-1/2 text-center md:text-left">
