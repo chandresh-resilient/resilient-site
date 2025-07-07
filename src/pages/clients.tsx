@@ -6,7 +6,7 @@ const clients = [
   { name: 'Springer Nature', logo: '/clients/springer.png' },
   { name: 'KASP Securities', logo: '/clients/kasp.png' },
   { name: 'Royal IHC', logo: '/clients/ihc.png' },
-  { name: 'WeatherFord', logo: '/clients/weatherford.png' },
+  { name: 'WeatherFord', logo: '/clients/weather.png' },
   { name: 'Trane Technologies', logo: '/clients/trane.png' },
 ]
 

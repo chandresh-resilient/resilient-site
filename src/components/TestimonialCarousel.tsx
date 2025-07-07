@@ -62,9 +62,7 @@ export default function TestimonialCarousel() {
   );
 
   return (
-    <div className="relative max-w-6xl mx-auto px-4 py-16 text-center">
-      <h2 className="text-3xl font-bold text-[#1a103d] mb-10">What Our Clients Say</h2>
-
+    <div className="relative max-w-6xl mx-auto px-4 py-6 text-center">
       <AnimatePresence mode="wait">
         <motion.div
           key={page}
