@@ -92,7 +92,7 @@ const About = () => {
 
 					{/* CTA */}
 					<motion.a
-						href="/contact"
+						href="/aboutus"
 						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}

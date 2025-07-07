@@ -79,7 +79,7 @@ const AboutUs = () => {
     <Layout>
       <HeroHeader heading="About Us"></HeroHeader>
       <section
-        className="max-w-7xl  text-purple-900  mx-auto px-4 py-16"
+        className="max-w-7xl  text-black  mx-auto px-4 py-16"
         id="about"
       >
         <div className="flex flex-col md:flex-row items-center gap-12">

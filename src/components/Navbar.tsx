@@ -188,7 +188,7 @@ const Navbar = () => {
               Careers
             </a>
             <a
-              href="#contact"
+              href="/contact-detail"
               className="ml-4 px-4 py-2 bg-[#1E90FF] text-white rounded-full font-semibold hover:bg-blue-600 transition"
             >
               Get in touch
@@ -311,7 +311,7 @@ const Navbar = () => {
           <a href="/career" onClick={handleMenuItemClick}>
             Careers
           </a>
-          <a href="/#contact" onClick={handleMenuItemClick}>
+          <a href="/contact-detail" onClick={handleMenuItemClick}>
             Get in touch
           </a>
         </nav>
