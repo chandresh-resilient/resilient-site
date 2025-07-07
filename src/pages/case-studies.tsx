@@ -2,6 +2,8 @@
 import Image from 'next/image';
 import Layout from '@/components/Layout';
 import HeroBanner from '@/components/Herobanner';
+import TestimonialCarousel from '@/components/TestimonialCarousel';
+import ClientMarquee from '@/components/Clientscroll';
 
 const caseStudies = [
   {
@@ -33,11 +35,11 @@ const caseStudies = [
   },
 ];
 
+
 const CaseStudiesPage = () => {
   return (
     <Layout>
-    
-    <main className="bg-white py-20 px-6">
+    <main className="bg-white py-20 ">
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h1 className="text-4xl font-bold text-[#1a103d]">Case Studies</h1>
         <p className="mt-4 text-gray-600 max-w-xl mx-auto">
@@ -45,6 +47,7 @@ const CaseStudiesPage = () => {
         </p>
       </div>
 
+    <ClientMarquee/>
       <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-10 max-w-6xl mx-auto">
         {caseStudies.map((cs, index) => (
           <div
@@ -74,6 +77,27 @@ const CaseStudiesPage = () => {
         ))}
       </div>
     </main>
+
+     
+
+             <HeroBanner 
+          backgroundImage="/images/team.jpg"
+          title="Transforming Businesses with Low-Code Solutions"
+          buttonText="Consult Today"
+          onButtonClick={() => window.location.href = "/career"}
+        />
+
+    <section className="mt-24 bg-gray-100 py-16 px-4">
+  <div className="max-w-6xl mx-auto text-center mb-10">
+    <h2 className="text-3xl font-bold text-[#1a103d]">What Our Clients Say</h2>
+    <p className="text-gray-600 mt-2">
+      Trusted by global enterprises for their mission-critical solutions.
+    </p>
+  </div>
+  <TestimonialCarousel />
+</section>
+
+
    
     </Layout>
   );

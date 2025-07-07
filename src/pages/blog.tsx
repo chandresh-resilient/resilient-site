@@ -1,9 +1,8 @@
 'use client';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
-import Link from 'next/link';
 import HeroHeader from '@/components/Heroheader';
-import { div } from 'framer-motion/client';
+
 
 const blogs = [
   {
@@ -81,12 +80,10 @@ const BlogPage = () => {
                 <h3 className="font-semibold text-lg text-gray-900">{blog.title}</h3>
                 <p className="text-sm text-gray-600 mt-2 mb-4">{blog.subtitle}</p>
                 <div className="flex items-center gap-3 text-sm text-gray-500">
-                  <Image
+                  <img
                     src={blog.avatar}
                     alt={blog.author}
-                    width={32}
-                    height={32}
-                    className="rounded-full"
+                    className="w-10 h-10 rounded-full object-cover"
                   />
                   <span>{blog.author}</span>
                   <span>|</span>

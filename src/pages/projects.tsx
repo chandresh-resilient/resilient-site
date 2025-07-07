@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Layout from '@/components/Layout';
 import HeroHeader from '@/components/Heroheader';
+import ClientMarquee from '@/components/Clientscroll';
 
 const allProjects = [
   {
@@ -51,11 +52,12 @@ const ProjectsPage = () => {
   return (
     <Layout>
     <HeroHeader heading="Our Projects" />
+    <ClientMarquee/>
     <main className="bg-[#f9fafb] py-20 px-6">
       <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="mt-4 text-gray-600 max-w-xl mx-auto">
+        <p className="mt-4 text-gray-600 text-3xl max-w-xl mx-auto">
           Explore how Resilient IT Services delivers impact using low-code solutions across industries.
-        </h2>
+        </p>
       </div>
 
       <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-8 max-w-6xl mx-auto">
