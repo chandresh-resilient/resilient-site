@@ -56,7 +56,7 @@ const About = () => {
 	}, []);
 
 	return (
-		<section className="bg-background-black py-20 px-6 md:px-12">
+		<section className="bg-black py-20 px-6 md:px-12">
 			<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
 				{/* Left Text */}
 				<div className="md:w-1/2 text-center md:text-left">
@@ -103,7 +103,7 @@ const About = () => {
 						whileTap={{ scale: 0.95 }}
 						className="group inline-block mt-6 px-7 py-3 bg-primary text-white font-semibold rounded-full relative overflow-hidden transition-all duration-300"
 					>
-						<span className="relative z-10 flex items-center gap-2">
+						<span className="relative z-10 flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full">
 							Let’s Build Smarter
 							<motion.span
 								className="inline-block"

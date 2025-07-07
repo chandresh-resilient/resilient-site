@@ -32,7 +32,7 @@ export default function TechnologiesPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-4xl sm:text-5xl font-bold mb-14"
+          className="text-4xl sm:text-5xl text-white font-bold mb-14"
         >
           Technologies We Specialize In
         </motion.h1>
