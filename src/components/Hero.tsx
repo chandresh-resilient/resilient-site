@@ -5,8 +5,7 @@ import { ChevronDown } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import TypewriterEffect from './Typewriter'
-
+import TypewriterEffect from './typewriter'
 const counters = [
   { value: 500, suffix: '+', label: 'Projects Delivered' },
   { value: 98, suffix: '%', label: 'Client Satisfaction' },
