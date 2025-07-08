@@ -18,20 +18,13 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
 }) => {
   return (
     <div
-      className="relative flex items-center justify-center h-[350px] md:h-[400px] text-center overflow-hidden text-white"
+      className="relative flex items-center justify-center h-[350px] md:h-[400px] text-center overflow-hidden my-8 text-white"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-           <Image
-            src="/mlogo.png"
-            alt="Hero Background"
-            layout="fill"
-            objectFit="contain"
-            className="rounded-lg opacity-40"
-      />
  <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <div className="relative z-10 max-w-2xl px-4">

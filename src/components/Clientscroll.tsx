@@ -11,7 +11,7 @@ const clients = [
 
 export default function ClientMarquee() {
   return (
-    <div className="bg-[#b4b4b4] py-8 my-8 overflow-hidden">
+    <div className="bg-[#ffffff] py-8 my-8 overflow-hidden">
       <div className="whitespace-nowrap animate-marquee flex items-center gap-12">
         {clients.concat(clients).map((client, index) => (
           <div key={index} className="inline-block min-w-[120px]">
