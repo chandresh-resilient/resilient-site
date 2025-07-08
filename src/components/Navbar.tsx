@@ -378,7 +378,7 @@ export default function Header() {
         { name: 'Webinars', href: '/blog#webinars' }
       ]
     },
-    { name: 'Careers', href: '/careers' }
+    { name: 'Careers', href: '/career' }
   ];
 
   const handleDropdownToggle = (index) => {
