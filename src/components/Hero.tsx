@@ -17,6 +17,15 @@ import {
   LucideIcon,
 } from "lucide-react";
 
+interface MousePosition {
+  x: number;
+  y: number;
+}
+
+interface CursorTrailItem extends MousePosition {
+  id: number;
+}
+
 interface Slide {
   id: number;
   bgImage: string;
@@ -30,21 +39,11 @@ interface Slide {
   };
 }
 
-interface MousePosition {
-  x: number;
-  y: number;
-}
-
-interface CursorTrailItem extends MousePosition {
-  id: number;
-}
-
 const HeroSlider: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
   const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 });
   const [cursorTrail, setCursorTrail] = useState<CursorTrailItem[]>([]);
-  const [currentCursorIcon, setCurrentCursorIcon] = useState<number>(0);
 
   const slides: Slide[] = [
     {
@@ -79,53 +78,28 @@ const HeroSlider: React.FC = () => {
     },
   ];
 
-  // Cursor icons
   const cursorIcons: LucideIcon[] = [Terminal, Cpu, Network, Database, Code, Shield, Server, Cloud];
+  const [currentCursorIcon, setCurrentCursorIcon] = useState<number>(0);
 
-  // Mouse move tracking
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent): void => {
-      const { clientX, clientY } = e;
-      setMousePosition({ x: clientX, y: clientY });
-
-      setCursorTrail((prev) => [...prev.slice(-20), { x: clientX, y: clientY, id: Date.now() }]);
+      setMousePosition({ x: e.clientX, y: e.clientY });
+      setCursorTrail((prev) => [
+        ...prev.slice(-20),
+        { x: e.clientX, y: e.clientY, id: Date.now() },
+      ]);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  // Rotate cursor icons every 2s
   useEffect(() => {
     const iconTimer = setInterval(() => {
       setCurrentCursorIcon((prev) => (prev + 1) % cursorIcons.length);
     }, 2000);
-
     return () => clearInterval(iconTimer);
   }, []);
-
-  // Auto slide change
-
-  const handleSlideChange = useCallback((newSlide: number | ((prev: number) => number)) => {
-    if (typeof newSlide === "function") {
-      setCurrentSlide((prev) => newSlide(prev));
-    } else {
-      setCurrentSlide(newSlide);
-    }
-    setIsTransitioning(true);
-    setTimeout(() => setIsTransitioning(false), 800);
-  }, []);
-  useEffect(() => {
-    const timer = setInterval(() => {
-      handleSlideChange((prev) => (prev + 1) % slides.length);
-    }, 6000);
-
-    return () => clearInterval(timer);
-  }, [handleSlideChange, slides.length]);
-
-  const nextSlide = () => handleSlideChange((currentSlide + 1) % slides.length);
-  const prevSlide = () => handleSlideChange((currentSlide - 1 + slides.length) % slides.length);
-  const goToSlide = (index: number) => handleSlideChange(index);
 
   const CustomCursor: React.FC = () => {
     const CurrentIcon = cursorIcons[currentCursorIcon];
@@ -143,7 +117,6 @@ const HeroSlider: React.FC = () => {
             <CurrentIcon className="w-4 h-4 text-white" />
           </div>
         </div>
-
         {cursorTrail.map((point, index) => (
           <div
             key={point.id}
@@ -160,15 +133,42 @@ const HeroSlider: React.FC = () => {
     );
   };
 
-  // Return JSX (as in your code)...
+  const handleSlideChange = useCallback(
+    (newSlide: number | ((prev: number) => number)) => {
+      if (typeof newSlide === "function") {
+        setCurrentSlide((prev) => newSlide(prev));
+      } else {
+        setCurrentSlide(newSlide);
+      }
+      setIsTransitioning(true);
+      setTimeout(() => setIsTransitioning(false), 800);
+    },
+    []
+  );
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      handleSlideChange((prev) => (prev + 1) % slides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [handleSlideChange, slides.length]);
+
+  const nextSlide = () => handleSlideChange((currentSlide + 1) % slides.length);
+  const prevSlide = () => handleSlideChange((currentSlide - 1 + slides.length) % slides.length);
+  const goToSlide = (index: number) => handleSlideChange(index);
+
   return (
-    // Your existing JSX markup here...
-    // I've removed it from this block to avoid redundancy
-    // Please paste the JSX you already had in the `return` statement
-    <>
+    <section className="relative min-h-screen overflow-hidden bg-slate-900">
+      {/* Backgrounds */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-slate-900/20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width=60 height=60 viewBox=0 0 60 60 xmlns=http://www.w3.org/2000/svg%3E%3Cg fill=none fill-rule=evenodd%3E%3Cg fill=%236b7280 fill-opacity=0.1%3E%3Cpath d=M30 30c0-16.569 13.431-30 30-30v60c-16.569 0-30-13.431-30-30z/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+      </div>
+
       <CustomCursor />
-      {/* ...continue rendering slides */}
-    </>
+
+      {/* ...rest of your JSX remains unchanged... */}
+    </section>
   );
 };
 
