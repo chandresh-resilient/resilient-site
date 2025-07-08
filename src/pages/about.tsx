@@ -1,9 +1,14 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight, Circle } from 'lucide-react';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { ChevronRight } from 'lucide-react';
 
-const phrases = [
+type Phrase = {
+  headline: string;
+  subheading: string;
+};
+
+const phrases: Phrase[] = [
   {
     headline: 'build faster and deliver smarter.',
     subheading: 'Low-code platforms and AI copilots power our enterprise-grade solutions.',
@@ -47,28 +52,25 @@ const phrases = [
 ];
 
 const AboutSection: React.FC = () => {
-  const [index, setIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [index, setIndex] = useState<number>(0);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
 
-  // Auto-scrolling effect
   useEffect(() => {
     if (!isPaused) {
       const interval = setInterval(() => {
         setIndex((prev) => (prev + 1) % phrases.length);
-      }, 5000); // Change phrase every 5 seconds
+      }, 5000);
       return () => clearInterval(interval);
     }
   }, [isPaused]);
 
-  // Navigation handler for dots
   const handleDotClick = (idx: number) => {
     setIndex(idx);
     setIsPaused(true);
-    setTimeout(() => setIsPaused(false), 3000); // Resume auto-scroll after 3s
+    setTimeout(() => setIsPaused(false), 3000);
   };
 
-  // Animation variants
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -76,29 +78,48 @@ const AboutSection: React.FC = () => {
     },
   };
 
-  const textVariants = {
+  const textVariants: Variants = {
     hidden: { opacity: 0, y: 15, filter: 'blur(4px)' },
-    visible: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.5, ease: 'easeInOut' } },
-    exit: { opacity: 0, y: -15, filter: 'blur(4px)', transition: { duration: 0.5, ease: 'easeInOut' } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: 'blur(0px)',
+      transition: { duration: 0.5, ease: 'easeInOut' },
+    },
+    exit: {
+      opacity: 0,
+      y: -15,
+      filter: 'blur(4px)',
+      transition: { duration: 0.5, ease: 'easeInOut' },
+    },
   };
 
-  const imageVariants = {
+  const imageVariants: Variants = {
     hidden: { opacity: 0, scale: 0.98, rotate: 2 },
-    visible: { opacity: 1, scale: 1, rotate: 0, transition: { duration: 0.7, ease: 'easeOut' } },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      rotate: 0,
+      transition: { duration: 0.7, ease: 'easeOut' },
+    },
   };
 
-  const buttonVariants = {
+  const buttonVariants: Variants = {
     hidden: { opacity: 0, y: 15 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6, ease: 'easeOut' } },
-    hover: { scale: 1.03, boxShadow: '0px 0px 12px rgba(96, 165, 250, 0.3)', transition: { duration: 0.2 } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, delay: 0.6, ease: 'easeOut' },
+    },
+    hover: {
+      scale: 1.03,
+      boxShadow: '0px 0px 12px rgba(96, 165, 250, 0.3)',
+      transition: { duration: 0.2 },
+    },
   };
 
   return (
-    <section
-      className="relative py-24 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900"
-      id="about"
-    >
-      {/* Background Animation */}
+    <section className="relative py-24 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900" id="about">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="bg-[url('/patterns/stars.png')] bg-repeat animate-twinkle opacity-20" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(255,255,255,0.05)_50%,transparent_100%)] animate-pulse-slow" />
@@ -136,7 +157,7 @@ const AboutSection: React.FC = () => {
               </h1>
               <AnimatePresence mode="wait">
                 <motion.p
-                  key={index + '-sub'}
+                  key={`${index}-sub`}
                   variants={textVariants}
                   initial="hidden"
                   animate="visible"
@@ -148,7 +169,7 @@ const AboutSection: React.FC = () => {
               </AnimatePresence>
             </div>
 
-            {/* Carousel Dots */}
+            {/* Dots */}
             <div className="flex justify-center lg:justify-start gap-2 mt-6">
               {phrases.map((_, idx) => (
                 <button
@@ -179,7 +200,7 @@ const AboutSection: React.FC = () => {
             </motion.a>
           </div>
 
-          {/* Right Visual */}
+          {/* Right Image */}
           <div className="relative">
             <motion.div
               variants={imageVariants}
@@ -199,7 +220,7 @@ const AboutSection: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* CSS for Animations */}
+      {/* Keyframes */}
       <style jsx>{`
         @keyframes twinkle {
           0% {

@@ -1,10 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { JSX } from 'react';
+import { motion, Variants } from 'framer-motion';
 import { Workflow, Layers, Shield, Bot, Compass, CheckCircle } from 'lucide-react';
 
+interface Service {
+  icon: JSX.Element;
+  features: string[];
+}
+
 const ServicesSection: React.FC = () => {
-  // Scalable services array
-  const services = [
+  const services: Service[] = [
     {
       icon: <Workflow className="w-14 h-14 text-blue-400" />,
       features: ['Rapid App Development', 'Citizen Developer Tools', 'Workflow Customization', 'Integration Platforms'],
@@ -31,8 +35,8 @@ const ServicesSection: React.FC = () => {
     },
   ];
 
-  // Professional animation variants
-  const cardVariants = {
+  // Animation Variants
+  const cardVariants: Variants = {
     hidden: { opacity: 0, x: 50 },
     visible: (i: number) => ({
       opacity: 1,
@@ -41,7 +45,7 @@ const ServicesSection: React.FC = () => {
     }),
   };
 
-  const featureVariants = {
+  const featureVariants: Variants = {
     initial: { opacity: 0, y: 10 },
     visible: (i: number) => ({
       opacity: 1,
@@ -51,7 +55,7 @@ const ServicesSection: React.FC = () => {
     hover: { scale: 1.03, transition: { duration: 0.2 } },
   };
 
-  const buttonVariants = {
+  const buttonVariants: Variants = {
     initial: { scale: 1 },
     hover: { scale: 1.03, transition: { duration: 0.2 } },
   };
@@ -82,11 +86,12 @@ const ServicesSection: React.FC = () => {
             viewport={{ once: true }}
             className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
-            Our cutting-edge services drive digital transformation through AI-driven automation, low-code development, seamless application and data migration, advanced content management, and strategic IT consulting, ensuring efficiency, innovation, and alignment with your business goals.
+            Our cutting-edge services drive digital transformation through AI-driven automation, low-code development,
+            seamless application and data migration, advanced content management, and strategic IT consulting,
+            ensuring efficiency, innovation, and alignment with your business goals.
           </motion.p>
         </div>
 
-        {/* Grid Layout */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
           initial="hidden"
@@ -148,9 +153,17 @@ const ServicesSection: React.FC = () => {
                   </svg>
                 </motion.a>
               </div>
+
+              {/* Decorative Hover Gradient */}
               <motion.div
                 className="absolute inset-0 bg-gradient-to-t from-blue-400/20 to-purple-400/20 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-xl"
-                animate={{ borderColor: ['rgba(96, 165, 250, 0.2)', 'rgba(147, 51, 234, 0.2)', 'rgba(96, 165, 250, 0.2)'] }}
+                animate={{
+                  borderColor: [
+                    'rgba(96, 165, 250, 0.2)',
+                    'rgba(147, 51, 234, 0.2)',
+                    'rgba(96, 165, 250, 0.2)',
+                  ],
+                }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
             </motion.div>
@@ -158,7 +171,7 @@ const ServicesSection: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* CSS for Animations */}
+      {/* Scoped CSS Animations */}
       <style jsx>{`
         @keyframes twinkle {
           0% {

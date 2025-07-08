@@ -1,8 +1,17 @@
 'use client';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 
-const industries = [
+import { motion, Variants } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import React from 'react';
+
+type Industry = {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+};
+
+const industries: Industry[] = [
   {
     title: 'Healthcare',
     description: 'Improving patient outcomes through modern digital solutions and data-driven care.',
@@ -41,31 +50,31 @@ const industries = [
   },
 ];
 
+// Animation Variants
+const cardVariants: Variants = {
+  hidden: { opacity: 0, x: 50 },
+  visible: (i: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5, delay: i * 0.1, ease: 'easeInOut' },
+  }),
+};
+
+const textVariants: Variants = {
+  initial: { opacity: 0, y: 10 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, delay: i * 0.1, ease: 'easeOut' },
+  }),
+};
+
+const buttonVariants: Variants = {
+  initial: { scale: 1 },
+  hover: { scale: 1.03, transition: { duration: 0.2 } },
+};
+
 const IndustriesSection: React.FC = () => {
-  // Animation variants
-  const cardVariants = {
-    hidden: { opacity: 0, x: 50 },
-    visible: (i: number) => ({
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.5, delay: i * 0.1, ease: 'easeInOut' },
-    }),
-  };
-
-  const textVariants = {
-    initial: { opacity: 0, y: 10 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.4, delay: i * 0.1, ease: 'easeOut' },
-    }),
-  };
-
-  const buttonVariants = {
-    initial: { scale: 1 },
-    hover: { scale: 1.03, transition: { duration: 0.2 } },
-  };
-
   return (
     <section className="relative py-24 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       {/* Background Animation */}
@@ -85,6 +94,7 @@ const IndustriesSection: React.FC = () => {
           >
             Industries We Serve
           </motion.h2>
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -96,7 +106,7 @@ const IndustriesSection: React.FC = () => {
           </motion.p>
         </div>
 
-        {/* Grid Layout */}
+        {/* Cards Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
           initial="hidden"
@@ -109,12 +119,11 @@ const IndustriesSection: React.FC = () => {
         >
           {industries.map((item, idx) => (
             <motion.div
-              key={idx}
+              key={item.title}
               custom={idx}
               variants={cardVariants}
               className="relative h-[460px] rounded-xl overflow-hidden border border-white/20 shadow-lg group"
             >
-              {/* Image */}
               <img
                 src={item.image}
                 alt={item.title}
@@ -124,7 +133,7 @@ const IndustriesSection: React.FC = () => {
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent pointer-events-none transition-opacity duration-300 group-hover:opacity-90" />
 
-              {/* Content */}
+              {/* Text */}
               <div className="absolute bottom-6 left-6 right-6 text-gray-100 z-10">
                 <motion.h3
                   custom={0}
@@ -160,7 +169,7 @@ const IndustriesSection: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* CSS for Animations */}
+      {/* CSS Animations */}
       <style jsx>{`
         @keyframes twinkle {
           0% {

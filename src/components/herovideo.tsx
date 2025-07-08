@@ -1,10 +1,11 @@
 'use client';
-import { motion } from 'framer-motion';
+import React from 'react';
+import { motion, Variants } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
-  // Animation variants
-  const containerVariants = {
+  // Animation variants with type annotation
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -12,19 +13,23 @@ const HeroSection: React.FC = () => {
     },
   };
 
-  const textVariants = {
+  const textVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
   };
 
-  const buttonVariants = {
+  const buttonVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.4, ease: 'easeOut' } },
-    hover: { scale: 1.03, boxShadow: '0px 0px 12px rgba(96, 165, 250, 0.3)', transition: { duration: 0.2 } },
+    hover: {
+      scale: 1.03,
+      boxShadow: '0px 0px 12px rgba(96, 165, 250, 0.3)',
+      transition: { duration: 0.2 },
+    },
   };
 
   return (
-    <section className="relative h-screen md:min-h-[60vh] w-full overflow-hidden  group">
+    <section className="relative h-screen md:min-h-[60vh] w-full overflow-hidden group">
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-103"
@@ -36,6 +41,7 @@ const HeroSection: React.FC = () => {
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent transition-opacity duration-300 group-hover:opacity-90 pointer-events-none" />
+
       {/* Background Animation */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="bg-[url('/patterns/stars.png')] bg-repeat animate-twinkle opacity-20" />
@@ -60,7 +66,8 @@ const HeroSection: React.FC = () => {
           variants={textVariants}
           className="text-base sm:text-lg md:text-xl text-gray-300 max-w-lg sm:max-w-xl md:max-w-2xl mb-10 line-clamp-3"
         >
-          We are a team of passionate professionals dedicated to delivering innovative solutions that drive success for our clients. Our approach combines creativity, technology, and strategy to create impactful results.
+          We are a team of passionate professionals dedicated to delivering innovative solutions that drive success for
+          our clients. Our approach combines creativity, technology, and strategy to create impactful results.
         </motion.p>
         <motion.a
           href="/aboutus"

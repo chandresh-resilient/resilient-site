@@ -1,25 +1,32 @@
-'use client';
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { Users, ArrowRight } from 'lucide-react';
+"use client";
 
-const technologies = [
-  { name: 'Mendix', logo: '/logos/mendix.png' },
-  { name: 'OutSystems', logo: '/logos/outsystem.png' },
-  { name: 'React', logo: '/logos/react.png' },
-  { name: 'Documentum', logo: '/logos/documentum.png' },
-  { name: 'Java', logo: '/logos/java.png' },
-  { name: 'Node.js', logo: '/logos/nodejs.png' },
-  { name: 'Angular', logo: '/logos/angular.png' },
-  { name: 'Vue.js', logo: '/logos/vuejs.png' },
-  { name: 'Kotlin', logo: '/logos/kotlin.png' },
-  { name: 'Caspio', logo: '/logos/caspio.png' },
-  { name: 'PowerApps', logo: '/logos/powerapps.png' },
-  { name: 'Docker', logo: '/logos/docker.png' },
-  { name: 'Kubernetes', logo: '/logos/kubernetes.png' },
-  { name: 'PostgreSQL', logo: '/logos/postgresql.png' },
-  { name: 'MySQL', logo: '/logos/mysql.png' },
-  { name: 'MongoDB', logo: '/logos/mongodb.png' },
+import React, { useEffect, useRef } from "react";
+import { motion, Variants } from "framer-motion";
+// import type { Variants } from 'framer-motion';
+import { Users, ArrowRight } from "lucide-react";
+
+interface Technology {
+  name: string;
+  logo: string;
+}
+
+const technologies: Technology[] = [
+  { name: "Mendix", logo: "/logos/mendix.png" },
+  { name: "OutSystems", logo: "/logos/outsystem.png" },
+  { name: "React", logo: "/logos/react.png" },
+  { name: "Documentum", logo: "/logos/documentum.png" },
+  { name: "Java", logo: "/logos/java.png" },
+  { name: "Node.js", logo: "/logos/nodejs.png" },
+  { name: "Angular", logo: "/logos/angular.png" },
+  { name: "Vue.js", logo: "/logos/vuejs.png" },
+  { name: "Kotlin", logo: "/logos/kotlin.png" },
+  { name: "Caspio", logo: "/logos/caspio.png" },
+  { name: "PowerApps", logo: "/logos/powerapps.png" },
+  { name: "Docker", logo: "/logos/docker.png" },
+  { name: "Kubernetes", logo: "/logos/kubernetes.png" },
+  { name: "PostgreSQL", logo: "/logos/postgresql.png" },
+  { name: "MySQL", logo: "/logos/mysql.png" },
+  { name: "MongoDB", logo: "/logos/mongodb.png" },
 ];
 
 const TechnologiesSection: React.FC = () => {
@@ -34,7 +41,7 @@ const TechnologiesSection: React.FC = () => {
         if (entry.isIntersecting) {
           video.playbackRate = 1;
           video.play().catch((e) => {
-            console.warn('Autoplay prevented:', e);
+            console.warn("Autoplay prevented:", e);
           });
         } else {
           video.pause();
@@ -42,7 +49,7 @@ const TechnologiesSection: React.FC = () => {
       },
       {
         root: null,
-        rootMargin: '0px',
+        rootMargin: "0px",
         threshold: 0.2,
       }
     );
@@ -54,8 +61,7 @@ const TechnologiesSection: React.FC = () => {
     };
   }, []);
 
-  // Animation variants
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -63,24 +69,28 @@ const TechnologiesSection: React.FC = () => {
     },
   };
 
-  const textVariants = {
+  const textVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
-  const techVariants = {
+  const techVariants: Variants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: (i: number) => ({
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.3, delay: i * 0.05, ease: 'easeOut' },
+      transition: { duration: 0.3, delay: i * 0.05, ease: "easeOut" },
     }),
   };
 
-  const buttonVariants = {
+  const buttonVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.4, ease: 'easeOut' } },
-    hover: { scale: 1.03, boxShadow: '0px 0px 12px rgba(96, 165, 250, 0.3)', transition: { duration: 0.2 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.4, ease: "easeOut" } },
+    hover: {
+      scale: 1.03,
+      boxShadow: "0px 0px 12px rgba(96, 165, 250, 0.3)",
+      transition: { duration: 0.2 },
+    },
   };
 
   return (
@@ -91,7 +101,6 @@ const TechnologiesSection: React.FC = () => {
           ref={videoRef}
           playsInline
           muted
-          autoPlay={false}
           poster="https://github.githubassets.com/images/modules/site/copilot/hero/bg-poster@2x.webp"
           className="w-full h-full object-cover"
         >
@@ -101,9 +110,15 @@ const TechnologiesSection: React.FC = () => {
           />
         </video>
       </div>
+
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-8 pb-24">
-        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <motion.h1
             variants={textVariants}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-8"
@@ -121,6 +136,7 @@ const TechnologiesSection: React.FC = () => {
                 key={tech.name}
                 custom={index}
                 variants={techVariants}
+                initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 className="flex flex-col items-center space-y-2 hover:scale-110 transition-transform duration-300"
@@ -149,10 +165,11 @@ const TechnologiesSection: React.FC = () => {
                   Ready to Transform Your Business?
                 </h3>
                 <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 leading-relaxed line-clamp-3">
-                  Join hundreds of businesses that trust Resilient IT Services to power their digital future. 
-                  Let’s discuss how we can help you achieve your technology goals.
+                  Join hundreds of businesses that trust Resilient IT Services to power their
+                  digital future. Let’s discuss how we can help you achieve your technology goals.
                 </p>
               </motion.div>
+
               <motion.div
                 className="flex flex-col sm:flex-row gap-4 justify-center"
                 variants={containerVariants}
@@ -168,6 +185,7 @@ const TechnologiesSection: React.FC = () => {
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </motion.button>
+
                 <motion.button
                   variants={buttonVariants}
                   whileHover="hover"
@@ -181,7 +199,7 @@ const TechnologiesSection: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* CSS for Animations */}
+      {/* Animation Styles */}
       <style jsx>{`
         @keyframes twinkle {
           0% {
@@ -194,6 +212,7 @@ const TechnologiesSection: React.FC = () => {
             opacity: 0.2;
           }
         }
+
         @keyframes pulse-slow {
           0% {
             background-position: 50% 50%;
@@ -205,9 +224,11 @@ const TechnologiesSection: React.FC = () => {
             background-position: 50% 50%;
           }
         }
+
         .animate-twinkle {
           animation: twinkle 6s ease-in-out infinite;
         }
+
         .animate-pulse-slow {
           animation: pulse-slow 12s ease-in-out infinite;
         }
