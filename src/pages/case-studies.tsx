@@ -86,7 +86,7 @@ const CaseStudiesPage = () => {
           backgroundImage="/images/team.jpg"
           title="Transforming Businesses with Low-Code Solutions"
           buttonText="Consult Today"
-          onButtonClick={() => window.location.href = "/career"}
+          onButtonClick={() => window.location.href = "/contact-detail"}
         />
 
     <section className="mt-24 bg-gray-100 py-16 px-4">

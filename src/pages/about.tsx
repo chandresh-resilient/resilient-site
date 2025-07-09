@@ -182,7 +182,7 @@ const AboutSection: React.FC = () => {
 
             {/* CTA */}
             <motion.a
-              href="/aboutus"
+              href="/about-us"
               variants={buttonVariants}
               initial="hidden"
               animate="visible"

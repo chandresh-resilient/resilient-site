@@ -30,7 +30,7 @@ const HeroSlider: React.FC = () => {
       id: 2,
       bgImage:
         "/back2.jpg",
-      title: "Trusted Global Clients",
+      title: "Trusted by Global Clients",
       subtitle: "Your Success, Our Code",
       description:
         "We partner with our clients to navigate complex IT challenges, delivering scalable solutions with precision and expertise.",

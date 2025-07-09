@@ -25,7 +25,7 @@ export default function Header() {
   }, []);
 
   const navigationItems = [
-    { name: "About us", href: "/aboutus" },
+    { name: "About us", href: "/about-us" },
     {
       name: "Solutions",
       href: "/solutions",
