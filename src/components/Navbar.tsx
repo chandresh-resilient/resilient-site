@@ -64,7 +64,7 @@ export default function Header() {
       hasDropdown: true,
       subItems: [
         { name: "Blog", href: "/blog" },
-        { name: "Whitepapers", href: "/blog#whitepapers" },
+        { name: "Low Code Cafe", href: "/blog#whitepapers" },
       ],
     },
     { name: "Careers", href: "/career" },
