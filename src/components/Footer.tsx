@@ -8,11 +8,11 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-black text-white pt-16 pb-6 px-4">
+    <footer className="bg-gray-900 text-white pt-16 pb-6 px-4 font-sans">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
         {/* Brand Info */}
         <div>
-          <h4 className="text-lg font-bold mb-2 text-white">Resilient IT</h4>
+          <h4 className="text-lg font-bold mb-2 text-gray-100">Resilient IT</h4>
           <p className="text-gray-400 text-sm">
             Transforming businesses through innovative low-code solutions.
           </p>
@@ -31,7 +31,7 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <h4 className="text-md font-semibold text-white mb-3">Services</h4>
+          <h4 className="text-md font-semibold text-gray-100 mb-3">Services</h4>
           <ul className="space-y-1 text-gray-400 text-sm">
             <li><a href="#" className="hover:text-white">App Development</a></li>
             <li><a href="#" className="hover:text-white">Digital Transformation</a></li>
@@ -42,7 +42,7 @@ export default function Footer() {
 
         {/* Technologies */}
         <div>
-          <h4 className="text-md font-semibold text-white mb-3">Technologies</h4>
+          <h4 className="text-md font-semibold text-gray-100 mb-3">Technologies</h4>
           <ul className="space-y-1 text-gray-400 text-sm">
             <li><a href="#" className="hover:text-white">Mendix</a></li>
             <li><a href="#" className="hover:text-white">Caspio</a></li>
@@ -53,7 +53,7 @@ export default function Footer() {
 
         {/* Company Links */}
         <div>
-          <h4 className="text-md font-semibold text-white mb-3">Company</h4>
+          <h4 className="text-md font-semibold text-gray-100 mb-3">Company</h4>
           <ul className="space-y-1 text-gray-400 text-sm">
             <li><a href="#about" className="hover:text-white">About Us</a></li>
             <li><a href="/careers" className="hover:text-white">Careers</a></li>
@@ -64,7 +64,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="text-center text-gray-500 text-sm border-t border-gray-800 pt-6">
+      <div className="text-center text-gray-500 text-sm border-t border-blue-500/30 pt-6">
         © {year} Resilient IT Services. All rights reserved.
       </div>
     </footer>

@@ -1,8 +1,7 @@
 'use client';
-
 import { motion, Variants } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-import React from 'react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useRef } from 'react';
 
 type Industry = {
   title: string;
@@ -60,146 +59,105 @@ const cardVariants: Variants = {
   }),
 };
 
-const textVariants: Variants = {
-  initial: { opacity: 0, y: 10 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4, delay: i * 0.1, ease: 'easeOut' },
-  }),
-};
-
-const buttonVariants: Variants = {
-  initial: { scale: 1 },
-  hover: { scale: 1.03, transition: { duration: 0.2 } },
-};
-
 const IndustriesSection: React.FC = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    const container = scrollRef.current;
+    if (container) {
+      const scrollAmount = container.offsetWidth;
+      container.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative py-24 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-      {/* Background Animation */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="bg-[url('/patterns/stars.png')] bg-repeat animate-twinkle opacity-20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(255,255,255,0.05)_50%,transparent_100%)] animate-pulse-slow" />
+    <section className="relative py-12 sm:py-16 bg-gray-900 font-sans">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-gray-900/50"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=60 height=60 viewBox=0 0 60 60 xmlns=http://www.w3.org/2000/svg%3E%3Cg fill=none fill-rule=evenodd%3E%3Cg fill=%2300A3E0 fill-opacity=0.15%3E%3Cpath d=M30 30c0-16.569 13.431-30 30-30v60c-16.569 0-30-13.431-30-30z/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        {/* Heading */}
+        <div className="text-center mb-10 sm:mb-12">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+            className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-blue-300 bg-clip-text text-transparent"
           >
             Industries We Serve
           </motion.h2>
-
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
             viewport={{ once: true }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
-            We empower diverse industries with innovative IT solutions, leveraging AI-driven automation, low-code platforms, and strategic consulting to drive efficiency and transformation.
+            We empower diverse industries with innovative IT solutions, leveraging AI-driven automation, low-code
+            platforms, and strategic consulting to drive efficiency and transformation.
           </motion.p>
         </div>
 
-        {/* Cards Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
-          }}
-        >
-          {industries.map((item, idx) => (
-            <motion.div
-              key={item.title}
-              custom={idx}
-              variants={cardVariants}
-              className="relative h-[460px] rounded-xl overflow-hidden border border-white/20 shadow-lg group"
+        {/* Carousel */}
+        <div className="relative overflow-hidden">
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory [-ms-overflow-style:'none'] [scrollbar-width:'none'] [&::-webkit-scrollbar]:hidden px-2"
+          >
+            {industries.map((item, idx) => (
+              <motion.div
+                key={item.title}
+                custom={idx}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="w-[90%] sm:w-[300px] h-[400px] sm:h-[460px] flex-shrink-0 snap-start mx-2 relative rounded-xl overflow-hidden border border-blue-500/30 shadow-lg group"
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5 z-10 text-white space-y-2">
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="text-sm line-clamp-3">{item.description}</p>
+                  <a
+                    href={item.link}
+                    className="inline-flex items-center mt-2 text-sm font-medium bg-blue-600 rounded-full px-4 py-2 text-white transition hover:bg-blue-700"
+                  >
+                    Read More
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Scroll Buttons */}
+          <div className="flex justify-center gap-4 mt-8">
+            <button
+              onClick={() => scroll('left')}
+              className="bg-gray-800/70 hover:bg-gray-800/90 text-blue-400 p-3 rounded-full border border-blue-500/30 hover:border-blue-500 transition hover:scale-105"
+              aria-label="Scroll left"
             >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-103 group-hover:brightness-90"
-              />
-
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent pointer-events-none transition-opacity duration-300 group-hover:opacity-90" />
-
-              {/* Text */}
-              <div className="absolute bottom-6 left-6 right-6 text-gray-100 z-10">
-                <motion.h3
-                  custom={0}
-                  initial="initial"
-                  animate="visible"
-                  variants={textVariants}
-                  className="text-lg font-semibold"
-                >
-                  {item.title}
-                </motion.h3>
-                <motion.p
-                  custom={1}
-                  initial="initial"
-                  animate="visible"
-                  variants={textVariants}
-                  className="text-sm mt-2 line-clamp-3"
-                >
-                  {item.description}
-                </motion.p>
-                <motion.a
-                  href={item.link}
-                  variants={buttonVariants}
-                  whileHover="hover"
-                  className="group inline-flex items-center mt-4 text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 rounded-full px-4 py-2 text-white transition-all duration-300 hover:shadow-md hover:shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  aria-label={`Read more about ${item.title}`}
-                >
-                  Read More
-                  <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:scale-110" />
-                </motion.a>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => scroll('right')}
+              className="bg-gray-800/70 hover:bg-gray-800/90 text-blue-400 p-3 rounded-full border border-blue-500/30 hover:border-blue-500 transition hover:scale-105"
+              aria-label="Scroll right"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
       </div>
-
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes twinkle {
-          0% {
-            opacity: 0.2;
-          }
-          50% {
-            opacity: 0.5;
-          }
-          100% {
-            opacity: 0.2;
-          }
-        }
-        @keyframes pulse-slow {
-          0% {
-            background-position: 50% 50%;
-          }
-          50% {
-            background-position: 100% 100%;
-          }
-          100% {
-            background-position: 50% 50%;
-          }
-        }
-        .animate-twinkle {
-          animation: twinkle 6s ease-in-out infinite;
-        }
-        .animate-pulse-slow {
-          animation: pulse-slow 12s ease-in-out infinite;
-        }
-      `}</style>
     </section>
   );
 };

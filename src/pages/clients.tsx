@@ -75,16 +75,12 @@ const ProofSection: React.FC = () => {
   const [hoveredCompany, setHoveredCompany] = useState<number | null>(null);
 
   return (
-    <section className="relative py-20 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-      {/* Background Animation */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="bg-[url('/patterns/stars.png')] bg-repeat animate-twinkle opacity-20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(255,255,255,0.05)_50%,transparent_100%)] animate-pulse-slow" />
-      </div>
+    <section className="relative py-20 overflow-hidden bg-gray-900">
+     
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-blue-300 bg-clip-text text-transparent">
             Trusted by Industry Leaders
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">

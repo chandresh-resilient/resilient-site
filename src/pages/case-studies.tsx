@@ -48,7 +48,7 @@ const CaseStudiesPage = () => {
       </div>
 
     <ClientMarquee/>
-      <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-10 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-3 sm:grid-cols-1 px-4 py-8 gap-10 max-w-6xl mx-auto">
         {caseStudies.map((cs, index) => (
           <div
             key={index}

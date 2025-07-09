@@ -94,7 +94,8 @@ const TechnologiesSection: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-[auto] py-24 overflow-hidden bg-black">
+    <section className="relative min-h-[auto] py-24 overflow-hidden bg-gray-900 ">
+      
       {/* Background Video */}
       <div className="w-screen h-full z-[1] overflow-hidden absolute inset-0">
         <video
@@ -174,17 +175,18 @@ const TechnologiesSection: React.FC = () => {
                 className="flex flex-col sm:flex-row gap-4 justify-center"
                 variants={containerVariants}
               >
-                <motion.button
+                <motion.a
+                  href="/contact-detail"
                   variants={buttonVariants}
                   whileHover="hover"
-                  className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold text-base sm:text-lg text-white transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold text-base sm:text-lg text-white transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25  focus:outline-none focus:ring-2 focus:ring-blue-400"
                 >
                   <span className="relative z-10 flex items-center justify-center">
                     Schedule Consultation
                     <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </motion.button>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0  transition-opacity duration-300" />
+                </motion.a>
 
                 <motion.button
                   variants={buttonVariants}
