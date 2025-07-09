@@ -1,14 +1,17 @@
-'use client'
-import { Mail, Phone, MapPin } from 'lucide-react'
+"use client";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function ContactPage() {
   return (
     <section className="bg-[#0f172a] text-white py-20 px-4" id="contact">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">Let's Build Something Amazing</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+            Let's Build Something Amazing
+          </h2>
           <p className="text-gray-300 text-lg">
-            Ready to accelerate your digital transformation? Get in touch with our experts today.
+            Ready to accelerate your digital transformation? Get in touch with
+            our experts today.
           </p>
         </div>
 
@@ -21,7 +24,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="text-white font-semibold">Phone</h4>
-                <a href='tel:+15551234567'>+1 (555) 123-4567</a>
+                <a href="tel:+15551234567">+1 (555) 123-4567</a>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -30,7 +33,9 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="text-white font-semibold">Email</h4>
-                <a href='mailto:info@resilientitservices.com'>info@resilientitservices.com</a>
+                <a href="mailto:info@resilientitservices.com">
+                  info@resilientitservices.com
+                </a>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -39,17 +44,29 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="text-white font-semibold">Address</h4>
-                <a href='https://maps.app.goo.gl/Eq1cCRDMDHBFG9Qf9' target='_blank'>SR NO.60, 3 FL NO.1102, AUSTIN PARK, PUNE CITY, Pune, Maharashtra, India</a>
+                <a
+                  href="https://maps.app.goo.gl/Eq1cCRDMDHBFG9Qf9"
+                  target="_blank"
+                >
+                  SR NO.60, 3 FL NO.1102, AUSTIN PARK, PUNE CITY, Pune,
+                  Maharashtra, India
+                </a>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <form className="space-y-6">
+          <form
+            action="https://formspree.io/f/your-id"
+            method="POST"
+            className="space-y-6"
+          >
             <div>
               <label className="block mb-1 text-sm font-medium">Name</label>
               <input
                 type="text"
+                name="name"
+                required
                 placeholder="Your Name"
                 className="w-full px-4 py-3 bg-[#1e293b] border border-gray-700 rounded-md text-white"
               />
@@ -58,6 +75,8 @@ export default function ContactPage() {
               <label className="block mb-1 text-sm font-medium">Email</label>
               <input
                 type="email"
+                name="email"
+                required
                 placeholder="your@email.com"
                 className="w-full px-4 py-3 bg-[#1e293b] border border-gray-700 rounded-md text-white"
               />
@@ -65,6 +84,8 @@ export default function ContactPage() {
             <div>
               <label className="block mb-1 text-sm font-medium">Message</label>
               <textarea
+                name="message"
+                required
                 rows={5}
                 placeholder="Tell us about your project..."
                 className="w-full px-4 py-3 bg-[#1e293b] border border-gray-700 rounded-md text-white"
@@ -80,5 +101,5 @@ export default function ContactPage() {
         </div>
       </div>
     </section>
-  )
+  );
 }

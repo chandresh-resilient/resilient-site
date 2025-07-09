@@ -34,11 +34,11 @@ const jobs = [
 const CareerPage = () => {
   return (
     <Layout>
-      <HeroHeader heading="Kickstart your Career"/>
+      <HeroHeader heading="Grow With Us"/>
     <main className="bg-[#f9fafb] text-gray-800 py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-extrabold text-[#1a103d]">Join Resilient IT Services</h1>
+          <h1 className="text-4xl font-extrabold text-[#1a103d]">Join the Team, Shape the Future</h1>
           <p className="mt-4 text-lg text-gray-600">
             Be part of a passionate team delivering low-code innovation with Mendix, OutSystems, and beyond.
           </p>

@@ -7,32 +7,46 @@ import HeroHeader from '@/components/Heroheader';
 
 const teamMembers = [
   {
-    name: 'John Doe',
+    name: 'Chandresh Shukla',
     role: 'Founder & CEO',
-    image: '/images/person1.jpg',
-    bio: 'Passionate about low-code technologies, Siddharth leads innovation at Resilient IT Services with a focus on scalable and fast delivery.',
-    linkedin: 'https://linkedin.com/in/siddharth',
+    image: '/images/user.jpg',
+    bio: 'Passionate about low-code technologies, John leads innovation at Resilient IT Services with a focus on scalable and fast delivery.',
+    linkedin: 'https://www.linkedin.com/company/resilient-it-services/posts/?feedView=all',
   },
   {
-    name: 'Neha Sharma',
+    name: 'Rajnish Singh',
     role: 'Head of Delivery',
-    image: '/images/person2.jpg',
+      image: '/images/user.jpg',
     bio: 'Expert in Mendix and client management, Neha ensures our projects are always on time and exceed expectations.',
-    linkedin: 'https://linkedin.com/in/neha',
+    linkedin: 'https://www.linkedin.com/company/resilient-it-services/posts/?feedView=all',
   },
   {
-    name: 'Jay Cadogan',
+    name: 'Sukhvinder Singh',
     role: 'Senior Mendix Developer',
-    image: '/images/person3.jpg',
+     image: '/images/user.jpg',
     bio: 'Jay builds robust applications using Mendix and mentors junior developers on low-code best practices.',
-    linkedin: 'https://linkedin.com/in/jaycadogan',
+    linkedin: 'https://www.linkedin.com/company/resilient-it-services/posts/?feedView=all',
   },
   {
-    name: 'Nina Morsa',
+    name: 'Sachin Yadav',
     role: 'UX/UI Designer',
-    image: '/images/person4.jpg',
+     image: '/images/user.jpg',
     bio: 'Nina creates clean and intuitive user experiences that enhance application usability across industries.',
-    linkedin: 'https://linkedin.com/in/ninamorsa',
+    linkedin: 'https://www.linkedin.com/company/resilient-it-services/posts/?feedView=all',
+  },
+  {
+    name: 'Gautam Kapoor',
+    role: 'Lead Frontend Engineer',
+    image: '/images/user.jpg',
+    bio: 'With a keen eye for detail, Siddharth develops responsive and engaging user interfaces using React and Tailwind CSS.',
+    linkedin: 'https://www.linkedin.com/company/resilient-it-services/posts/?feedView=all',
+  },
+  {
+    name: 'Devesh Bajpayee',
+    role: 'Business Strategist',
+     image: '/images/user.jpg',
+    bio: 'Eric drives our business strategy, ensuring we align technology solutions with client goals and market trends.',
+    linkedin: 'https://www.linkedin.com/company/resilient-it-services/posts/?feedView=all',
   },
 ];
 
@@ -42,7 +56,7 @@ const TeamPage = () => {
       <HeroHeader heading="Meet the experts"/>
       <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 text-[#1a103d]">
         <div className="max-w-7xl mx-auto text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl font-bold">Meet Our Team</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold">The Minds Behind Our Mission</h1>
           <p className="mt-4 text-gray-600 text-base sm:text-lg">
             Resilient IT Services is powered by a team of innovators, engineers, and designers passionate about building low-code solutions that drive impact.
           </p>

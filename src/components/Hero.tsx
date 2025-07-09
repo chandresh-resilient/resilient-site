@@ -19,7 +19,7 @@ const HeroSlider: React.FC = () => {
     {
       id: 1,
       bgImage:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        "/back.jpg",
       title: "Innovate with Technology",
       subtitle: "Empowering Your Business with Cutting-Edge Solutions",
       description:
@@ -29,7 +29,7 @@ const HeroSlider: React.FC = () => {
     {
       id: 2,
       bgImage:
-        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80",
+        "/back2.jpg",
       title: "Trusted Global Clients",
       subtitle: "Your Success, Our Code",
       description:
@@ -39,7 +39,7 @@ const HeroSlider: React.FC = () => {
     {
       id: 3,
       bgImage:
-        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2076&q=80",
+        "/back3.jpg",
       title: "Future-Proof IT Solutions",
       subtitle: "Building Tomorrow’s Technology Today",
       description:

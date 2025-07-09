@@ -8,37 +8,37 @@ const testimonials = [
     name: "Emily Zhao",
     company: "Allianz Trade",
     quote: "Resilient IT helped us modernize our insurance portal. The team was professional, fast, and delivered measurable results.",
-    image: "/images/person1.jpg",
+    image: "/images/user.jpg",
   },
   {
     name: "Jeroen De Vries",
     company: "Zendeq",
     quote: "We doubled our conversion rate after implementing their low-code trading solution. Incredible speed and quality.",
-    image: "/images/person2.jpg",
+    image: "/images/user.jpg",
   },
   {
     name: "Li Wei",
     company: "Tencent",
     quote: "Their Kubernetes-native Mendix solution improved our release velocity by 60%. We’re extremely happy with the partnership.",
-    image: "/images/person3.jpg",
+       image: "/images/user.jpg",
   },
   {
     name: "Aditi Sharma",
     company: "Tech Innovators",
     quote: "The team at Resilient IT Services transformed our digital operations. Their expertise in low-code platforms is unmatched.",
-    image: "/images/person4.jpg",
+      image: "/images/user.jpg",
   },
   {
     name: "Carlos Mendez",
     company: "Global Logistics",
     quote: "Their low-code solutions streamlined our logistics processes, saving us time and resources. Highly recommend!",
-    image: "/images/person1.jpg",
+    image: "/images/user.jpg",
   },
   {
     name: "Sofia Petrova",
     company: "EduTech Solutions",
     quote: "Resilient IT Services delivered a robust low-code platform for our educational tools. Their support was exceptional.",
-    image: "/images/person3.jpg",
+     image: "/images/user.jpg",
   },
 ];
 

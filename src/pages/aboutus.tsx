@@ -13,18 +13,20 @@ const AboutUs = () => {
   const [start, setStart] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   const content = {
-    mission: `Empower clients through innovative low-code solutions that drive digital transformation.`,
-    vision: `Be the leading force in revolutionizing how businesses build software through cutting-edge low-code platforms.`,
-    values: `
-      Innovation: Embrace creativity and cutting-edge technology to deliver superior solutions.
-      \n\nWork Culture: Foster an open work culture that empowers employees to achieve maximum performance while maintaining a healthy work-life balance.
+    mission: `Empower our clients by delivering cutting-edge low-code solutions that streamline operations, enhance agility, and accelerate digital transformation. By leveraging modern low-code platforms, we enable organizations to rapidly build and deploy scalable, secure, and user-friendly applications—reducing development time and costs while fostering innovation across their digital ecosystem.`,
+    vision: `To be the driving force behind a global shift in software development—empowering businesses to innovate faster, smarter, and more efficiently through the transformative power of cutting-edge low-code platforms.`,
+    values: `Innovation
+      We embrace creativity, curiosity, and cutting-edge technology to craft transformative low-code solutions. We continuously explore new ideas to stay ahead of the curve and deliver meaningful impact to our clients.
+      
+      Work Culture
+      We cultivate a collaborative, transparent, and inclusive work environment that empowers every team member. By supporting personal growth and maintaining a healthy work-life balance, we ensure our people thrive both professionally and personally.
     `,
   };
 
   const counters = [
     { value: 500, suffix: "+", label: "Projects Delivered" },
     { value: 98, suffix: "%", label: "Client Satisfaction" },
-    { value: 24, suffix: "*7", label: "Support Available" },
+    { value: 24, suffix: "/7", label: "Support Available" },
     { value: 5, suffix: "+", label: "Years Experience" },
   ];
 
@@ -78,10 +80,7 @@ const AboutUs = () => {
   return (
     <Layout>
       <HeroHeader heading="About Us"></HeroHeader>
-      <section
-        className="max-w-7xl  text-black  mx-auto px-4 py-16"
-        id="about"
-      >
+      <section className="max-w-7xl  text-black  mx-auto px-4 py-16" id="about">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -98,7 +97,7 @@ const AboutUs = () => {
               cutting-edge low-code platforms like Mendix, OutSystems, Caspio,
               and modern stacks like React and Vite.
             </p>
-            <p className="text-md text-black">
+            <p className="text-lg text-black leading-relaxed">
               We empower businesses to streamline operations and accelerate
               innovation by reducing development time while maintaining high
               quality and flexibility. Our goal is to help clients digitally
@@ -143,7 +142,7 @@ const AboutUs = () => {
             </div>
 
             {/* Content */}
-            <p className="text-gray-700 whitespace-pre-line">
+            <p className="text-gray-700 text-lg whitespace-pre-line">
               {content[activeTab]}
             </p>
           </div>
@@ -272,24 +271,6 @@ const AboutUs = () => {
 
 export default AboutUs;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React, { useState, useEffect } from 'react';
 // import { ChevronLeft, ChevronRight, Shield, Server, Cloud, Code, Users, ArrowRight, Play, CheckCircle } from 'lucide-react';
 
@@ -359,7 +340,7 @@ export default AboutUs;
 //   return (
 //     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white overflow-hidden relative">
 //       <FloatingParticles />
-      
+
 //       {/* Animated Background Grid */}
 //       <div className="absolute inset-0 opacity-10">
 //         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse" />
@@ -376,7 +357,7 @@ export default AboutUs;
 //             Resilient IT Services
 //           </h1>
 //         </div>
-        
+
 //         <nav className="hidden md:flex space-x-8">
 //           {['Home', 'Services', 'About', 'Contact'].map((item) => (
 //             <a
@@ -399,9 +380,9 @@ export default AboutUs;
 //             <br />
 //             <span className="text-white">IT Solutions</span>
 //           </h2>
-          
+
 //           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-//             Empowering businesses with cutting-edge technology solutions that drive innovation, 
+//             Empowering businesses with cutting-edge technology solutions that drive innovation,
 //             enhance security, and accelerate digital transformation.
 //           </p>
 
@@ -413,7 +394,7 @@ export default AboutUs;
 //               </span>
 //               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 //             </button>
-            
+
 //             <button className="group flex items-center px-8 py-4 border-2 border-white/20 rounded-full font-semibold text-lg hover:border-white/40 transition-all duration-300 hover:bg-white/5">
 //               <Play className="mr-2 w-5 h-5 transition-transform group-hover:scale-110" />
 //               Watch Demo
@@ -445,7 +426,7 @@ export default AboutUs;
 
 //           <div className="relative">
 //             <div className="overflow-hidden rounded-2xl">
-//               <div 
+//               <div
 //                 className="flex transition-transform duration-500 ease-in-out"
 //                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
 //               >
@@ -456,11 +437,11 @@ export default AboutUs;
 //                         <div className="flex-shrink-0 text-blue-400 mb-6 md:mb-0">
 //                           {service.icon}
 //                         </div>
-                        
+
 //                         <div className="flex-1 text-center md:text-left">
 //                           <h4 className="text-3xl font-bold mb-4 text-white">{service.title}</h4>
 //                           <p className="text-gray-300 text-lg mb-6 leading-relaxed">{service.description}</p>
-                          
+
 //                           <div className="flex flex-wrap gap-3 justify-center md:justify-start">
 //                             {service.features.map((feature, featureIndex) => (
 //                               <span
@@ -488,7 +469,7 @@ export default AboutUs;
 //               >
 //                 <ChevronLeft className="w-6 h-6" />
 //               </button>
-              
+
 //               <div className="flex space-x-2 items-center">
 //                 {services.map((_, index) => (
 //                   <button
@@ -500,7 +481,7 @@ export default AboutUs;
 //                   />
 //                 ))}
 //               </div>
-              
+
 //               <button
 //                 onClick={() => setCurrentSlide(prev => (prev + 1) % services.length)}
 //                 className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-110"
@@ -519,10 +500,10 @@ export default AboutUs;
 //             <Users className="w-16 h-16 text-blue-400 mx-auto mb-6" />
 //             <h3 className="text-4xl font-bold mb-6 text-white">Ready to Transform Your Business?</h3>
 //             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-//               Join hundreds of businesses that trust Resilient IT Services to power their digital future. 
+//               Join hundreds of businesses that trust Resilient IT Services to power their digital future.
 //               Let's discuss how we can help you achieve your technology goals.
 //             </p>
-            
+
 //             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 //               <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 overflow-hidden">
 //                 <span className="relative z-10 flex items-center justify-center">
@@ -531,7 +512,7 @@ export default AboutUs;
 //                 </span>
 //                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 //               </button>
-              
+
 //               <button className="px-8 py-4 border-2 border-white/20 rounded-full font-semibold text-lg hover:border-white/40 transition-all duration-300 hover:bg-white/5">
 //                 Learn More
 //               </button>

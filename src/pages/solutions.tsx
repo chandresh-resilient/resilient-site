@@ -94,7 +94,7 @@ By leveraging pre-built components, we avoid writing repetitive code, which spee
             </p>
           </div>
           <Image
-            src="/images/auto.jpg"
+            src="/images/performance.jpg"
             width={600}
             height={400}
             alt="Workflow Automation"
@@ -112,7 +112,7 @@ By leveraging pre-built components, we avoid writing repetitive code, which spee
         {/* Item 2 */}
         <div className="grid md:grid-cols-2 mx-auto gap-12 max-w-7xl px-6 items-center" id='expert-review'>
           <Image
-            src="/images/experts.jpg"
+            src="/images/security.jpg"
             width={600}
             height={400}
             alt="Mendix Expert Scan"

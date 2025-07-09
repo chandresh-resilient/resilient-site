@@ -4,6 +4,7 @@ import Layout from '@/components/Layout';
 import HeroBanner from '@/components/Herobanner';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import ClientMarquee from '@/components/Clientscroll';
+import HeroHeader from '@/components/Heroheader';
 
 const caseStudies = [
   {
@@ -39,9 +40,10 @@ const caseStudies = [
 const CaseStudiesPage = () => {
   return (
     <Layout>
+      <HeroHeader heading="Case Studies"/>
     <main className="bg-white py-20 ">
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <h1 className="text-4xl font-bold text-[#1a103d]">Case Studies</h1>
+        <h1 className="text-4xl font-bold text-[#1a103d]">Our Work in Action</h1>
         <p className="mt-4 text-gray-600 max-w-xl mx-auto">
           Explore how we help clients solve real business challenges using low-code solutions.
         </p>
