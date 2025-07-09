@@ -61,7 +61,7 @@ const ServicesSection: React.FC = () => {
   };
 
   return (
-    <section className="relative py-12 sm:py-16 bg-gray-900 font-sans">
+    <section className="relative py-12 sm:py-16 bg-gray-900 font-sans" id='services'>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-gray-900/50"></div>
@@ -107,7 +107,7 @@ const ServicesSection: React.FC = () => {
               key={index}
               custom={index}
               variants={cardVariants}
-              className="p-6 sm:p-8 bg-gray-800/60 rounded-lg border border-blue-500/20 transition-all duration-300"
+              className="p-6 sm:p-8 bg-gray-800/60 rounded-lg border border-blue-500/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
             >
               <div className="flex flex-col items-center text-center">
                 <motion.div
@@ -135,10 +135,10 @@ const ServicesSection: React.FC = () => {
                   ))}
                 </div>
                 <motion.a
-                  href="#"
+                  href="/solutions"
                   variants={buttonVariants}
                   whileHover="hover"
-                  className="mt-6 inline-flex items-center px-4 sm:px-6 py-2 bg-blue-600 rounded-md font-semibold text-white text-sm transition-all duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="mt-6 cursor-pointer inline-flex items-center px-4 sm:px-6 py-2 bg-blue-600 rounded-full font-semibold text-white text-sm transition-all duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   aria-label={`Learn more about service ${index + 1}`}
                 >
                   Learn More
@@ -153,7 +153,7 @@ const ServicesSection: React.FC = () => {
                   </svg>
                 </motion.a>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-blue-300/20 opacity-0 transition-opacity duration-300 rounded-lg" />
+              <div className=" inset-0 bg-gradient-to-r from-blue-500/20 to-blue-300/20 opacity-0 transition-opacity duration-300 rounded-lg" />
             </motion.div>
           ))}
         </motion.div>

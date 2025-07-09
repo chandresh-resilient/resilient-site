@@ -187,7 +187,7 @@ const AboutSection: React.FC = () => {
               initial="hidden"
               animate="visible"
               whileHover="hover"
-              className="group inline-flex items-center mt-8 px-6 py-2 bg-blue-600 rounded-md font-semibold text-white text-sm transition-all duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="group inline-flex items-center mt-8 px-6 py-2 bg-blue-600 rounded-full font-semibold text-white text-sm transition-all duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
               aria-label="Learn more about our services"
             >
               Let’s Build Smarter

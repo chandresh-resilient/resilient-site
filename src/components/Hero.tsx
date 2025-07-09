@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight, Code, Server, Clock, Award, Phone, MapPin } from "lucide-react";
+import Link from "next/link"
 
 interface Slide {
   id: number;
@@ -23,17 +24,17 @@ const HeroSlider: React.FC = () => {
       subtitle: "Empowering Your Business with Cutting-Edge Solutions",
       description:
         "With over 20 years of expertise, we deliver transformative IT solutions tailored to your needs, driving innovation and efficiency.",
-      stats: { projects: "1200+", years: "20+", satisfaction: "95%" },
+      stats: { projects: "200+", years: "10+", satisfaction: "95%" },
     },
     {
       id: 2,
       bgImage:
         "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80",
-      title: "Trusted IT Partners",
+      title: "Trusted Global Clients",
       subtitle: "Your Success, Our Code",
       description:
         "We partner with our clients to navigate complex IT challenges, delivering scalable solutions with precision and expertise.",
-      stats: { projects: "800+", years: "15+", satisfaction: "97%" },
+      stats: { projects: "200+", years: "10+", satisfaction: "97%" },
     },
     {
       id: 3,
@@ -43,7 +44,7 @@ const HeroSlider: React.FC = () => {
       subtitle: "Building Tomorrow’s Technology Today",
       description:
         "Our team of skilled developers and engineers crafts innovative IT strategies, blending creativity with robust technical expertise.",
-      stats: { projects: "1000+", years: "18+", satisfaction: "96%" },
+      stats: { projects: "200+", years: "10+", satisfaction: "96%" },
     },
   ];
 
@@ -118,7 +119,7 @@ const HeroSlider: React.FC = () => {
             <div className="space-y-6 sm:space-y-8">
               <div className="inline-flex items-center px-3 py-1.5 bg-blue-900/30 text-blue-400 rounded-full border border-blue-500/40">
                 <Award className="w-4 h-4 mr-2" />
-                <span className="text-sm font-medium">Award-Winning IT Solutions</span>
+                <span className="text-sm font-medium">Trusted by 10+ clients</span>
               </div>
 
               <h1
@@ -155,16 +156,16 @@ const HeroSlider: React.FC = () => {
                   isTransitioning ? "opacity-0 translate-y-6" : "opacity-100 translate-y-0"
                 }`}
               >
-                <button className="relative overflow-hidden bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105">
+                <Link href="/contact-detail" className="relative overflow-hidden bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105">
                   <span className="relative z-10 flex items-center justify-center">
                     <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2" /> Get a Quote
                   </span>
-                </button>
-                <button className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105">
+                </Link>
+                <Link href="#services" className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105">
                   <span className="flex items-center justify-center">
                     <MapPin className="w-4 h-4 sm:w-5 sm:h-5 mr-2" /> Our Services
                   </span>
-                </button>
+                </Link>
               </div>
 
               {/* Stats */}
@@ -200,8 +201,8 @@ const HeroSlider: React.FC = () => {
                 },
                 {
                   icon: <Server className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400" />,
-                  title: "Cloud Infrastructure",
-                  desc: "Scalable and secure cloud solutions for optimal performance",
+                  title: "Low Code Innovation",
+                  desc: "Scalable and secure low code solutions for optimal performance",
                 },
                 {
                   icon: <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400" />,

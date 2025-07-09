@@ -98,7 +98,7 @@ const AboutUs = () => {
               cutting-edge low-code platforms like Mendix, OutSystems, Caspio,
               and modern stacks like React and Vite.
             </p>
-            <p className="text-md text-purple-700">
+            <p className="text-md text-black">
               We empower businesses to streamline operations and accelerate
               innovation by reducing development time while maintaining high
               quality and flexibility. Our goal is to help clients digitally

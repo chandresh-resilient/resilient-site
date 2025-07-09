@@ -55,6 +55,7 @@ const ProjectsPage = () => {
     <ClientMarquee/>
     <main className="bg-[#f9fafb] py-20 px-6">
       <div className="max-w-7xl mx-auto text-center mb-12">
+        <h1 className="text-3xl sm:text-4xl font-bold">Our Work Speaks for Itself</h1>
         <p className="mt-4 text-gray-600 text-3xl max-w-xl mx-auto">
           Explore how Resilient IT Services delivers impact using low-code solutions across industries.
         </p>

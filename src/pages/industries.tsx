@@ -46,7 +46,7 @@ const industries = [
     description:
       "The automobile sector is embracing low-code to streamline production monitoring, supply chain management, and vehicle tracking. These solutions ensure cost-effective operations and quick adaptations to market demands.",
     image: "/images/automobiles.jpg",
-    id: "automobile",
+    id: "automobiles",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function IndustriesPage() {
   return (
     <Layout>
       <HeroHeader heading="Industries We Serve" />
-    <div className="bg-[#eaf2fb]">
+    <div className="bg-white">
       {industries.map((item, index) => {
         const isEven = index % 2 === 0;
 
@@ -67,7 +67,7 @@ export default function IndustriesPage() {
             id={item.id}
           >
             <div className="flex flex-col justify-center items-start gap-4 w-full md:w-1/2 lg:w-3/5 xl:w-2/3 2xl:w-1/2 text-left">
-              <h2 className="text-purple-600 text-4xl font-bold mb-6">
+              <h2 className="text-black text-4xl font-bold mb-6">
                 {item.title}
               </h2>
               <p className="text-gray-700 leading-relaxed text-lg">

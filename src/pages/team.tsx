@@ -3,6 +3,7 @@ import Layout from '@/components/Layout';
 import Image from 'next/image';
 import { LinkedinIcon } from 'lucide-react';
 import HeroBanner from '@/components/Herobanner';
+import HeroHeader from '@/components/Heroheader';
 
 const teamMembers = [
   {
@@ -38,6 +39,7 @@ const teamMembers = [
 const TeamPage = () => {
   return (
     <Layout>
+      <HeroHeader heading="Meet the experts"/>
       <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 text-[#1a103d]">
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h1 className="text-3xl sm:text-4xl font-bold">Meet Our Team</h1>

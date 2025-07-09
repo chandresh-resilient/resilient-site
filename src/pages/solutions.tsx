@@ -18,14 +18,14 @@ const SolutionsPage = () => {
           {/* Left Content */}
           <div className="space-y-6 text-lg">
             <p>
-              With <Link href="/low-code-enablement" className="text-blue-600 underline">Mendix low-code</Link>, we quickly build flexible and scalable applications.
-              Because you can use existing components, you don’t have to code each element, which drastically shortens time to market and reduces errors.
+             Using <Link href="https://www.mendix.com/" target="_blank" className="text-blue-600 underline">Mendix low-code</Link>, we efficiently develop scalable and adaptable applications.
+By leveraging pre-built components, we avoid writing repetitive code, which speeds up development and minimizes the chances of errors.
             </p>
             <p>
-              Thanks to our extensive Mendix expertise, we immediately see how this low-code platform can meet your needs and help you get value from your application fast.
+           With our deep expertise in Mendix, we quickly identify how this low-code platform can address your specific requirements and deliver value from your application in no time.
             </p>
             <p>
-              We chose Mendix because it’s a reliable and feature-rich platform. In fact, <Link href="https://www.gartner.com" className="text-blue-600 underline">Gartner</Link> has named Mendix a global leader in low-code platforms for eight years in a row.
+             We selected Mendix for its robustness and comprehensive features. In fact, <Link href="https://www.gartner.com" target="_blank" className="text-blue-600 underline">Gartner</Link> has recognized Mendix as a global leader in low-code platforms for eight consecutive years.
             </p>
           </div>
 
@@ -56,7 +56,7 @@ const SolutionsPage = () => {
             </div>
             <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:scale-105 transition-transform">
               <Target className="w-10 h-10 text-blue-500 mx-auto mb-4" />
-              <h4 className="font-semibold text-lg">Rapid results and short time to market</h4>
+              <h4 className="font-semibold text-lg">Secured & Optimized Solutions</h4>
             </div>
           </div>
         </div>
@@ -69,10 +69,28 @@ const SolutionsPage = () => {
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Workflow automation & digitalisation</h3>
             <p className="mb-4">
-              Want your processes to run smoother, smarter, and faster? We build workflows in new applications or on top of core systems like SAP, PLM, Teamcenter, AFAS, Exact, IBM Maximo, Oracle, and various TMS solutions.
+              Want your processes to be more efficient, intelligent, and agile? We design workflows within new applications or seamlessly integrate them with core systems like SAP, PLM, Teamcenter, AFAS, Exact, IBM Maximo, Oracle, and multiple TMS platforms.
             </p>
             <p>
-              By digitizing and automating processes, you improve information flow, reduce routine tasks, and gain better insight into process data.
+              Digitizing and automating your processes enhances information flow, minimizes repetitive work, and provides clearer visibility into your process data for smarter decision-making.
+            </p>
+          </div>
+          <Image
+            src="/images/auto.jpg"
+            width={600}
+            height={400}
+            alt="Workflow Automation"
+            className="rounded-2xl shadow-lg"
+          />
+        </div>
+        <div className="grid md:grid-cols-2  mx-auto max-w-7xl px-6 gap-12 items-center">
+          <div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Performance Optimisation</h3>
+            <p className="mb-4">
+             We optimize performance in Mendix low-code apps by implementing efficient microflows, minimizing database queries, leveraging non-persistent entities, and using best practices for UI rendering—ensuring fast, scalable, and responsive applications.
+            </p>
+            <p>
+             Whether building from scratch or extending existing systems, we streamline your operations by creating smart, automated workflows tailored to your business needs.
             </p>
           </div>
           <Image
@@ -88,7 +106,7 @@ const SolutionsPage = () => {
           backgroundImage="/images/person4.jpg"
           title="Want to see how Mendix low-code can help your business?"
           buttonText="Get your free consultation"
-          onButtonClick={() => window.location.href = "/#contact"}
+          onButtonClick={() => window.location.href = "/contact-detail"}
         />
 
         {/* Item 2 */}
@@ -101,10 +119,26 @@ const SolutionsPage = () => {
             className="rounded-2xl shadow-lg order-2 md:order-1"
           />
           <div className="order-1 md:order-2">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Mendix Expert Scan</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Security Enhancement</h3>
             <p>
-              Is your Mendix application landscape well-built, secure, up to date, and future-ready? Our experts perform a deep dive into your Mendix applications to identify performance issues, scalability gaps, and security concerns. Get actionable recommendations for improvement.
+             We prioritize security by implementing robust authentication, role-based access control, data encryption, and compliance with industry standards to ensure your applications are protected end to end.
             </p>
+          </div>
+        </div>
+         <div className="grid md:grid-cols-2 mx-auto gap-12 max-w-7xl px-6 items-center" id='expert-review'>
+          <Image
+            src="/images/experts.jpg"
+            width={600}
+            height={400}
+            alt="Mendix Expert Scan"
+            className="rounded-2xl shadow-lg order-2 md:order-1"
+          />
+          <div className="order-1 md:order-2">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Mendix Development & Maintenance</h3>
+            <p>
+             We specialize in Mendix development and optimization by building high-performance, low-code applications that are scalable, maintainable, and tailored to your business goals—while ensuring seamless integration and fast user experiences.
+            </p>
+            <p>We build intelligent workflows that simplify operations, boost efficiency, and seamlessly integrate with your existing enterprise systems.</p>
           </div>
         </div>
       </section>

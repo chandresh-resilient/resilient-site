@@ -1,4 +1,5 @@
 'use client';
+import HeroHeader from '@/components/Heroheader';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -33,6 +34,7 @@ const jobs = [
 const CareerPage = () => {
   return (
     <Layout>
+      <HeroHeader heading="Kickstart your Career"/>
     <main className="bg-[#f9fafb] text-gray-800 py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
