@@ -65,8 +65,6 @@ export default function Header() {
       subItems: [
         { name: "Blog", href: "/blog" },
         { name: "Whitepapers", href: "/blog#whitepapers" },
-        { name: "Documentation", href: "/blog#documentation" },
-        { name: "Webinars", href: "/blog#webinars" },
       ],
     },
     { name: "Careers", href: "/career" },
