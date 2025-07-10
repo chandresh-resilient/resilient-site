@@ -105,8 +105,10 @@ const ServicesSection: React.FC = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              custom={index}
-              variants={cardVariants}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
               className="p-6 sm:p-8 bg-gray-800/60 rounded-lg border border-blue-500/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
             >
               <div className="flex flex-col items-center text-center">

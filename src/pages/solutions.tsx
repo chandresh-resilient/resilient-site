@@ -5,9 +5,20 @@ import { ShieldCheck, RefreshCw, Target } from 'lucide-react';
 import HeroHeader from '@/components/Heroheader';
 import Layout from '@/components/Layout';
 import HeroBanner from '@/components/Herobanner';
+import Head from 'next/head';
 
 const SolutionsPage = () => {
   return (
+    <>
+    <Head>
+      <title>Our Solutions | Resilient IT Services</title>
+      <meta name="description" content="Explore our low-code solutions using Mendix to accelerate your digital transformation." />
+      <meta property="og:title" content="Our Solutions | Resilient IT Services" />
+      <meta property="og:description" content="Discover how our low-code solutions can transform your business processes." />
+      <meta property="og:image" content="/logo-og.png" />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+    </Head>
     <Layout>
     <HeroHeader heading="Our solutions"></HeroHeader>
     <main className="bg-[#f9fafb] text-gray-800">
@@ -144,6 +155,7 @@ By leveraging pre-built components, we avoid writing repetitive code, which spee
       </section>
     </main>
     </Layout>
+    </>
   );
 };
 
