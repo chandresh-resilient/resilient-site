@@ -11,7 +11,7 @@ const teamMembers = [
     name: "Chandresh Shukla",
     role: "Founder & CEO",
     image: "/images/user.jpg",
-    bio: "Passionate about low-code technologies, John leads innovation at Resilient IT Services with a focus on scalable and fast delivery.",
+    bio: "Passionate about low-code technologies, Chandresh leads innovation at Resilient IT Services with a focus on scalable and fast delivery.",
     linkedin:
       "https://www.linkedin.com/company/resilient-it-services/posts/?feedView=all",
   },
@@ -19,7 +19,7 @@ const teamMembers = [
     name: "Rajnish Singh",
     role: "Head of Delivery",
     image: "/images/user.jpg",
-    bio: "Expert in Mendix and client management, Neha ensures our projects are always on time and exceed expectations.",
+    bio: "Expert in Mendix and client management, Rajnish ensures our projects are always on time and exceed expectations.",
     linkedin:
       "https://www.linkedin.com/company/resilient-it-services/posts/?feedView=all",
   },
@@ -27,7 +27,7 @@ const teamMembers = [
     name: "Sukhvinder Singh",
     role: "Senior Mendix Developer",
     image: "/images/user.jpg",
-    bio: "Jay builds robust applications using Mendix and mentors junior developers on low-code best practices.",
+    bio: "Sukhvinder builds robust applications using Mendix and mentors junior developers on low-code best practices.",
     linkedin:
       "https://www.linkedin.com/company/resilient-it-services/posts/?feedView=all",
   },
@@ -35,7 +35,7 @@ const teamMembers = [
     name: "Sachin Yadav",
     role: "UX/UI Designer",
     image: "/images/user.jpg",
-    bio: "Nina creates clean and intuitive user experiences that enhance application usability across industries.",
+    bio: "Sachin creates clean and intuitive user experiences that enhance application usability across industries.",
     linkedin:
       "https://www.linkedin.com/company/resilient-it-services/posts/?feedView=all",
   },
@@ -43,7 +43,7 @@ const teamMembers = [
     name: "Gautam Kapoor",
     role: "Lead Frontend Engineer",
     image: "/images/user.jpg",
-    bio: "With a keen eye for detail, Siddharth develops responsive and engaging user interfaces using React and Tailwind CSS.",
+    bio: "With a keen eye for detail, Gautam develops responsive and engaging user interfaces using React and Tailwind CSS.",
     linkedin:
       "https://www.linkedin.com/company/resilient-it-services/posts/?feedView=all",
   },
@@ -51,7 +51,7 @@ const teamMembers = [
     name: "Devesh Bajpayee",
     role: "Business Strategist",
     image: "/images/user.jpg",
-    bio: "Eric drives our business strategy, ensuring we align technology solutions with client goals and market trends.",
+    bio: "Devesh drives our business strategy, ensuring we align technology solutions with client goals and market trends.",
     linkedin:
       "https://www.linkedin.com/company/resilient-it-services/posts/?feedView=all",
   },
