@@ -14,6 +14,7 @@ export default function Home() {
     <>
       <Head>
         <title>Resilient IT Services | Low-Code Innovation Experts</title>
+        <meta name="google-site-verification" content="KOQ9ZtuDz6mI0CNJI4wmQK1FknRWrwS7rcXXJ9d2qd0" />
         <meta
           name="description"
           content="Accelerating digital transformation with scalable low-code solutions using Mendix, OutSystems, React, and more."
@@ -34,7 +35,6 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
          <link rel="canonical" href="https://resilientitservices.com/" />
-         <meta name="google-site-verification" content="KOQ9ZtuDz6mI0CNJI4wmQK1FknRWrwS7rcXXJ9d2qd0" />
        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
