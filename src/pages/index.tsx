@@ -34,6 +34,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
          <link rel="canonical" href="https://resilientitservices.com/" />
+         <meta name="google-site-verification" content="KOQ9ZtuDz6mI0CNJI4wmQK1FknRWrwS7rcXXJ9d2qd0" />
        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
