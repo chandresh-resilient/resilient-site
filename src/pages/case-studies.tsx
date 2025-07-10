@@ -62,6 +62,8 @@ const CaseStudiesPage = () => {
           property="og:url"
           content="https://www.resilientitservices.com/case-studies"
         />
+        <link rel="canonical" href="https://resilientitservices.com/case-studies" />
+
       </Head>
       <Layout>
         <HeroHeader heading="Case Studies" />

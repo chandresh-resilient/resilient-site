@@ -72,6 +72,8 @@ export default function IndustriesPage() {
           content="https://resilientitservices.com/logo-og.png"
         />
         <meta property="og:url" content="https://www.resilientitservices.com" />
+        <link rel="canonical" href="https://resilientitservices.com/industries" />
+
       </Head>
       <Layout>
         <HeroHeader heading="Industries We Serve" />

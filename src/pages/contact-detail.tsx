@@ -24,6 +24,8 @@ const contactDetail = () => {
         />
         <meta property="og:image" content="https://resilientitservices.com/logo-og.png" />
         <meta property="og:url" content="https://www.resilientitservices.com" />
+        <link rel="canonical" href="https://resilientitservices.com/contact-detail" />
+
       </Head>
       <Layout>
         <HeroHeader heading="Consult the experts" />

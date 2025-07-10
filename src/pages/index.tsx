@@ -33,6 +33,40 @@ export default function Home() {
         <meta property="og:url" content="https://www.resilientitservices.com" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
+         <link rel="canonical" href="https://resilientitservices.com/" />
+       <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Resilient IT Services",
+              "url": "https://resilientitservices.com",
+              "logo": "https://resilientitservices.com/logo-og.png",
+              "sameAs": [
+                "https://www.linkedin.com/company/resilientitservices"
+              ],
+              "description": "Resilient IT Services specializes in low-code technologies like Mendix, OutSystems, and React to accelerate digital transformation with innovative software solutions.",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-555-123-4567",
+                "contactType": "customer support",
+                "email": "info@resilientitservices.com",
+                "areaServed": "IN",
+                "availableLanguage": "English"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "SR NO.60, 3 FL NO.1102, AUSTIN PARK, PUNE CITY",
+                "addressLocality": "Pune",
+                "addressRegion": "Maharashtra",
+                "postalCode": "411046",
+                "addressCountry": "IN"
+              }
+            })
+          }}
+        />
+
       </Head>
       <Layout>
         <Hero />

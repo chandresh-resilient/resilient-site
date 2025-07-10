@@ -79,6 +79,8 @@ const TeamPage = () => {
           content="https://resilientitservices.com/logo-og.png"
         />
         <meta property="og:url" content="https://www.resilientitservices.com" />
+        <link rel="canonical" href="https://resilientitservices.com/team" />
+
       </Head>
       <Layout>
         <HeroHeader heading="Meet the experts" />

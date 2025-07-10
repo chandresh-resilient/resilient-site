@@ -1,0 +1,6 @@
+# robots.txt for https://resilientitservices.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://resilientitservices.com/sitemap.xml

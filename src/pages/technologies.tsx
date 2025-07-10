@@ -188,13 +188,14 @@ const TechnologiesSection: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0  transition-opacity duration-300" />
                 </motion.a>
 
-                <motion.button
+                <motion.a
+                  href="/about-us"
                   variants={buttonVariants}
                   whileHover="hover"
                   className="px-8 py-4 border-2 text-white border-white/20 rounded-full font-semibold text-base sm:text-lg hover:border-white/40 transition-all duration-300 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 >
                   Learn More
-                </motion.button>
+                </motion.a>
               </motion.div>
             </motion.div>
           </div>

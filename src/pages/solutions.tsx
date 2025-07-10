@@ -31,6 +31,8 @@ const SolutionsPage = () => {
         <meta property="og:url" content="https://www.resilientitservices.com" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://resilientitservices.com/solution" />
+
       </Head>
       <Layout>
         <HeroHeader heading="Our solutions"></HeroHeader>

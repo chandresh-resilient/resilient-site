@@ -53,6 +53,8 @@ const CareerPage = () => {
           property="og:url"
           content="https://www.resilientitservices.com/career"
         />
+        <link rel="canonical" href="https://resilientitservices.com/career" />
+
       </Head>
       <Layout>
         <HeroHeader heading="Grow With Us" />

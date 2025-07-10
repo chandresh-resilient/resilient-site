@@ -94,6 +94,8 @@ const BlogPage = () => {
           property="og:url"
           content="https://www.resilientitservices.com/blog"
         />
+        <link rel="canonical" href="https://resilientitservices.com/blog" />
+
       </Head>
       <Layout>
         <HeroHeader heading="Blogs & Resources" />
