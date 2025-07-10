@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import Image from "next/image";
 import HeroHeader from "@/components/Heroheader";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 // Sample data grouped by section
 const sections = [
@@ -70,81 +71,106 @@ const sections = [
 
 const BlogPage = () => {
   return (
-    <Layout>
-      <HeroHeader heading="Blogs & Resources" />
-      <main className="bg-[#f9fafb] py-16 px-6">
-        <div className="max-w-7xl mx-auto space-y-20">
-          {sections.map((section, idx) => (
-            <section key={idx}>
-              <h2 className="text-2xl font-bold text-gray-800 mb-8">
-                {section.title}
-              </h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                {section.items.map((item, index) => (
-                  <div
-                    key={index}
-                    className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
-                  >
-                    {/* Item Image */}
-                    <div className="relative h-52 w-full overflow-hidden">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-t-2xl"
-                      />
-                      {item.badgeText && (
-                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent">
-                          <div className="absolute inset-0 bg-opacity-30 flex flex-col justify-center px-4">
-                            <h3 className="text-white font-bold text-lg uppercase">
-                              {item.badgeText}{" "}
-                              <span className="text-green-400">
-                                {item.badgeHighlight}
-                              </span>
-                            </h3>
-                            <p className="text-white text-xl font-semibold">
-                              {item.badgeSub}
-                            </p>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                    {/* Item Content */}
-                    <div className="p-5">
-                      <h3 className="font-semibold text-lg text-gray-900">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm text-gray-600 mt-2 mb-4">
-                        {item.subtitle}
-                      </p>
-                      <motion.a
-                        href="#"
-                        whileHover="hover"
-                        className="my-4 cursor-pointer inline-flex items-center px-4 sm:px-6 py-2 bg-blue-600 rounded-full font-semibold text-white text-sm transition-all duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                        aria-label={`Learn more about service ${index + 1}`}
-                      >
-                        Read More
-                      </motion.a>
-                      <div className="flex items-center gap-3 text-sm text-gray-500">
-                        <img
-                          src={item.avatar}
-                          alt={item.author}
-                          className="w-10 h-10 rounded-full object-cover"
+    <>
+      <Head>
+        <title>Blogs & Resources | Resilient IT Services</title>
+        <meta
+          name="description"
+          content="Explore our blogs and resources to stay updated on the latest trends in low-code development and digital transformation."
+        />
+        <meta
+          property="og:title"
+          content="Blogs & Resources | Resilient IT Services"
+        />
+        <meta
+          property="og:description"
+          content="Discover insights, tips, and updates from our experts in low-code development."
+        />
+        <meta
+          property="og:image"
+          content="https://resilientitservices.com/logo-og.png"
+        />
+        <meta
+          property="og:url"
+          content="https://www.resilientitservices.com/blog"
+        />
+      </Head>
+      <Layout>
+        <HeroHeader heading="Blogs & Resources" />
+        <main className="bg-[#f9fafb] py-16 px-6">
+          <div className="max-w-7xl mx-auto space-y-20">
+            {sections.map((section, idx) => (
+              <section key={idx}>
+                <h2 className="text-2xl font-bold text-gray-800 mb-8">
+                  {section.title}
+                </h2>
+                <div className="grid md:grid-cols-3 gap-8">
+                  {section.items.map((item, index) => (
+                    <div
+                      key={index}
+                      className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition"
+                    >
+                      {/* Item Image */}
+                      <div className="relative h-52 w-full overflow-hidden">
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          layout="fill"
+                          objectFit="cover"
+                          className="rounded-t-2xl"
                         />
-                        <span>{item.author}</span>
-                        <span>|</span>
-                        <span>{item.date}</span>
+                        {item.badgeText && (
+                          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent">
+                            <div className="absolute inset-0 bg-opacity-30 flex flex-col justify-center px-4">
+                              <h3 className="text-white font-bold text-lg uppercase">
+                                {item.badgeText}{" "}
+                                <span className="text-green-400">
+                                  {item.badgeHighlight}
+                                </span>
+                              </h3>
+                              <p className="text-white text-xl font-semibold">
+                                {item.badgeSub}
+                              </p>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      {/* Item Content */}
+                      <div className="p-5">
+                        <h3 className="font-semibold text-lg text-gray-900">
+                          {item.title}
+                        </h3>
+                        <p className="text-sm text-gray-600 mt-2 mb-4">
+                          {item.subtitle}
+                        </p>
+                        <motion.a
+                          href="#"
+                          whileHover="hover"
+                          className="my-4 cursor-pointer inline-flex items-center px-4 sm:px-6 py-2 bg-blue-600 rounded-full font-semibold text-white text-sm transition-all duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                          aria-label={`Learn more about service ${index + 1}`}
+                        >
+                          Read More
+                        </motion.a>
+                        <div className="flex items-center gap-3 text-sm text-gray-500">
+                          <img
+                            src={item.avatar}
+                            alt={item.author}
+                            className="w-10 h-10 rounded-full object-cover"
+                          />
+                          <span>{item.author}</span>
+                          <span>|</span>
+                          <span>{item.date}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
-      </main>
-    </Layout>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+        </main>
+      </Layout>
+    </>
   );
 };
 

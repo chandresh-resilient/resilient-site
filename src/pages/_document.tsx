@@ -45,7 +45,10 @@ export default function Document() {
           property="og:description"
           content="Accelerating digital transformation with cutting-edge low-code solutions."
         />
-        <meta property="og:image" content="/logo-og.png" />{" "}
+        <meta
+          property="og:image"
+          content="https://resilientitservices.com/logo-og.png"
+        />{" "}
         {/* Add to /public */}
         <meta property="og:url" content="https://www.resilientitservices.com" />
         <meta property="og:type" content="website" />

@@ -22,7 +22,8 @@ const contactDetail = () => {
           property="og:description"
           content="Reach out to our team to discuss your project or partnership opportunities."
         />
-        <meta property="og:image" content="/logo-og.png" />
+        <meta property="og:image" content="https://resilientitservices.com/logo-og.png" />
+        <meta property="og:url" content="https://www.resilientitservices.com" />
       </Head>
       <Layout>
         <HeroHeader heading="Consult the experts" />
