@@ -8,8 +8,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useRef } from "react";
-import { motion } from "framer-motion";
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,11 +41,11 @@ export default function Header() {
       href: "/solutions",
       hasDropdown: true,
       subItems: [
-        { name: "Cloud Migration", href: "/solutions#cloud-migration" },
-        { name: "Cybersecurity", href: "/solutions#cybersecurity" },
+        { name: "Workflow Automation", href: "/solutions#worlflow-automation" },
+        { name: "Performance Optimisation", href: "/solutions#performance-optimisation" },
         {
-          name: "Infrastructure Management",
-          href: "/solutions#infrastructure",
+          name: "Security & Compliance",
+          href: "/solutions#security-compliance",
         },
         {
           name: "Digital Transformation",
@@ -75,7 +74,7 @@ export default function Header() {
       hasDropdown: true,
       subItems: [
         { name: "Blog", href: "/blog" },
-        { name: "Low Code Cafe", href: "/blog#whitepapers" },
+        { name: "Low Code Cafe", href: "/blog#low-code-cafe" },
       ],
     },
     { name: "Careers", href: "/career" },

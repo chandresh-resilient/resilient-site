@@ -1,6 +1,7 @@
 import React, { JSX } from 'react';
 import { motion, Variants } from 'framer-motion';
 import { Workflow, Layers, Shield, Bot, Compass, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 
 interface Service {
   icon: JSX.Element;
@@ -136,10 +137,8 @@ const ServicesSection: React.FC = () => {
                     </motion.span>
                   ))}
                 </div>
-                <motion.a
+                <Link
                   href="/solutions"
-                  variants={buttonVariants}
-                  whileHover="hover"
                   className="mt-6 cursor-pointer inline-flex items-center px-4 sm:px-6 py-2 bg-blue-600 rounded-full font-semibold text-white text-sm transition-all duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   aria-label={`Learn more about service ${index + 1}`}
                 >
@@ -153,7 +152,7 @@ const ServicesSection: React.FC = () => {
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </motion.a>
+                </Link>
               </div>
               <div className=" inset-0 bg-gradient-to-r from-blue-500/20 to-blue-300/20 opacity-0 transition-opacity duration-300 rounded-lg" />
             </motion.div>

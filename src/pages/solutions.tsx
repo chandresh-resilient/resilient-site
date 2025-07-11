@@ -119,7 +119,7 @@ const SolutionsPage = () => {
           {/* 🔹 Use Case Section */}
           <section className=" mx-auto py-20 space-y-20">
             {/* Item 1 */}
-            <div className="grid md:grid-cols-2  mx-auto max-w-7xl px-6 gap-12 items-center">
+            <div className="grid md:grid-cols-2  mx-auto max-w-7xl px-6 gap-12 items-center" id="worlflow-automation">
               <div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                   Workflow automation & digitalisation
@@ -145,7 +145,7 @@ const SolutionsPage = () => {
                 className="rounded-2xl shadow-lg"
               />
             </div>
-            <div className="grid md:grid-cols-2  mx-auto max-w-7xl px-6 gap-12 items-center">
+            <div className="grid md:grid-cols-2  mx-auto max-w-7xl px-6 gap-12 items-center" id="performance-optimisation">
               <div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                   Performance Optimisation
@@ -182,7 +182,6 @@ const SolutionsPage = () => {
             {/* Item 2 */}
             <div
               className="grid md:grid-cols-2 mx-auto gap-12 max-w-7xl px-6 items-center"
-              id="expert-review"
             >
               <Image
                 src="/images/security.jpg"
@@ -191,7 +190,7 @@ const SolutionsPage = () => {
                 alt="Mendix Expert Scan"
                 className="rounded-2xl shadow-lg order-2 md:order-1"
               />
-              <div className="order-1 md:order-2">
+              <div className="order-1 md:order-2" id="security-compliance">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                   Security Enhancement
                 </h3>
@@ -214,7 +213,7 @@ const SolutionsPage = () => {
                 alt="Mendix Expert Scan"
                 className="rounded-2xl shadow-lg order-2 md:order-1"
               />
-              <div className="order-1 md:order-2">
+              <div className="order-1 md:order-2" id="mendix-expert-scan">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                   Mendix Development & Maintenance
                 </h3>

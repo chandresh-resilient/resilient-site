@@ -160,7 +160,6 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <ScrollIndicator />
-      <AnimatePresence>{showPreloader && <Preloader />}</AnimatePresence>
       <Component {...pageProps} />
     </>
   );

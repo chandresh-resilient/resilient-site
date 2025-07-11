@@ -71,6 +71,7 @@ const HeroSection: React.FC = () => {
         </motion.p>
         <motion.a
           href="#"
+          // target='_blank'
           variants={buttonVariants}
           whileHover="hover"
           className="group inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full font-semibold text-white text-base transition-all duration-300 hover:shadow-[0_0_8px_#00A3E0] focus:outline-none focus:ring-2 focus:ring-blue-400"

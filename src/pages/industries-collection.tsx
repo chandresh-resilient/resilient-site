@@ -2,6 +2,7 @@
 import { motion, Variants } from 'framer-motion';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import React, { useRef } from 'react';
+import Link from 'next/link';
 
 type Industry = {
   title: string;
@@ -127,13 +128,13 @@ const IndustriesSection: React.FC = () => {
                 <div className="absolute bottom-5 left-5 right-5 z-10 text-white space-y-2">
                   <h3 className="text-lg font-semibold">{item.title}</h3>
                   <p className="text-sm line-clamp-3">{item.description}</p>
-                  <a
+                  <Link
                     href={item.link}
                     className="inline-flex items-center mt-2 text-sm font-medium bg-blue-600 rounded-full px-4 py-2 text-white transition hover:bg-blue-700"
                   >
                     Read More
                     <ArrowRight className="ml-2 w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             ))}

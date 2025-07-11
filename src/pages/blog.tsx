@@ -46,7 +46,7 @@ const sections = [
   },
   {
     title: "Low-Code Café",
-    id: "low-code",
+    id: "low-code-cafe",
     items: [
       {
         title: "Why Low-Code is the Future",
@@ -102,7 +102,7 @@ const BlogPage = () => {
         <main className="bg-[#f9fafb] py-16 px-6">
           <div className="max-w-7xl mx-auto space-y-20">
             {sections.map((section, idx) => (
-              <section key={idx}>
+              <section key={idx} id={section.id}>
                 <h2 className="text-2xl font-bold text-gray-800 mb-8">
                   {section.title}
                 </h2>

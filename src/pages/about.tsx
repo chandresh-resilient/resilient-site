@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 type Phrase = {
   headline: string;
@@ -181,18 +182,14 @@ const AboutSection: React.FC = () => {
             </div>
 
             {/* CTA */}
-            <motion.a
+            <Link
               href="/about-us"
-              variants={buttonVariants}
-              initial="hidden"
-              animate="visible"
-              whileHover="hover"
               className="group inline-flex items-center mt-8 px-6 py-2 bg-blue-600 rounded-full font-semibold text-white text-sm transition-all duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
               aria-label="Learn more about our services"
             >
               Let’s Build Smarter
               <ChevronRight className="ml-2 w-5 h-5 transition-transform group-hover:scale-110" />
-            </motion.a>
+            </Link>
           </div>
 
           {/* Right Image */}
