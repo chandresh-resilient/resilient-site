@@ -8,6 +8,7 @@ import Clients from "./clients";
 import IndustriesPage from "./industries-collection";
 import HeroWithVideoBackground from "@/components/herovideo";
 import Head from "next/head";
+import ProcessPage from "./process";
 
 export default function Home() {
   return (
@@ -73,6 +74,7 @@ export default function Home() {
         <Hero />
         <Clients />
         <Services />
+        <ProcessPage />
         <HeroWithVideoBackground />
         <AboutUs />
         <IndustriesPage />

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./colors.scss";
+@tailwind utilities;
 
 
 @theme inline {
@@ -28,7 +29,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Hide scrollbar for Chrome, Safari, Opera */
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -59,15 +60,6 @@ body {
 }
 
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.animate-blink {
-  animation: blink 1s step-start infinite;
-}
-
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -78,17 +70,8 @@ body {
   animation: marquee 25s linear infinite;
 }
 
-@keyframes twinkle {
-  0%, 100% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 0.8;
-  }
-}
 
-.animate-twinkle {
-  animation: twinkle 1.5s ease-in-out infinite;
-}
+
+
 
 
