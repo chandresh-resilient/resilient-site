@@ -4,6 +4,7 @@ import HeroHeader from "@/components/Heroheader";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 const industries = [
   {
@@ -96,12 +97,12 @@ export default function IndustriesPage() {
                   <p className="text-gray-700 leading-relaxed text-lg">
                     {item.description}
                   </p>
-                  <a
+                  <Link
                     href="/contact-detail"
                     className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition"
                   >
                     Consult an expert
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="md:w-1/2 relative w-full aspect-[3/2]">

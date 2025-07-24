@@ -176,7 +176,7 @@ const SolutionsPage = () => {
               backgroundImage="/images/person4.jpg"
               title="Want to see how Mendix low-code can help your business?"
               buttonText="Get your free consultation"
-              onButtonClick={() => (window.location.href = "/contact-detail")}
+              href="/contact-detail"
             />
 
             {/* Item 2 */}

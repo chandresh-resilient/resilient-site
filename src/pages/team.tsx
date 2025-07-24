@@ -1,7 +1,7 @@
 "use client";
 import Layout from "@/components/Layout";
 import Image from "next/image";
-import { LinkedinIcon } from "lucide-react";
+import { Link, LinkedinIcon } from "lucide-react";
 import HeroBanner from "@/components/Herobanner";
 import HeroHeader from "@/components/Heroheader";
 import Head from "next/head";
@@ -111,7 +111,7 @@ const TeamPage = () => {
           backgroundImage="/images/team.jpg"
           title="Want to be part of our team?"
           buttonText="Explore Careers"
-          onButtonClick={() => (window.location.href = "/career")}
+          href="/career"
         />
 
         <section className="bg-white  px-4 sm:px-6 lg:px-8 text-[#1a103d]">

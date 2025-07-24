@@ -6,6 +6,7 @@ import TestimonialCarousel from "@/components/TestimonialCarousel";
 import ClientMarquee from "@/components/Clientscroll";
 import HeroHeader from "@/components/Heroheader";
 import Head from "next/head";
+import Link from "next/link";
 
 const caseStudies = [
   {
@@ -116,7 +117,7 @@ const CaseStudiesPage = () => {
           backgroundImage="/images/team.jpg"
           title="Transforming Businesses with Low-Code Solutions"
           buttonText="Consult Today"
-          onButtonClick={() => (window.location.href = "/contact-detail")}
+          href="/contact-detail"
         />
 
         <section className="mt-24 bg-gray-100 py-16 px-4">
